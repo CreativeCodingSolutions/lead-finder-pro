@@ -61,3 +61,13 @@ Route::middleware('auth')->group(function () {
     Route::post('/leads/validate-all', [LeadController::class, 'validateAll'])->name('leads.validate-all');
     Route::delete('/leads/{lead}', [LeadController::class, 'destroy'])->name('leads.destroy');
 });
+
+// Feature Modules (auto-loaded)
+$modules = glob(base_path('app/Modules/*/routes.php'));
+foreach ($modules as $routes) {
+    $moduleName = basename(dirname($routes));
+    $envKey = 'FEATURE_' . strtoupper($moduleName);
+    if (env($envKey, false)) {
+        require $routes;
+    }
+}
