@@ -1,0 +1,107 @@
+{
+  "product_name": "Lead Finder Pro",
+  "product_slug": "lead-finder-pro",
+  "product_type": "Micro SaaS",
+  "category": "Software > Developer Tools > Marketing",
+  "price_euro": 49.00,
+  "price_range": "€29-79",
+  "currency": "EUR",
+  "vat_note": "MwSt gemäß Kundenland (MOSS für EU B2C)",
+
+  "digistore24": {
+    "product_title": "Lead Finder Pro — Automatisch qualifizierte Leads finden",
+    "product_subtitle": "für Freelancer, Agenturen & Vertrieb",
+    "payment_type": "one_time",
+    "order_button_text": "Jetzt kaufen — 49€",
+    "guarantee": "14-Tage Geld-zurück-Garantie",
+    "description_html": "<h2>Das Problem</h2><p>Freelancer und Agenturen stundenlang nach potenziellen Kunden suchen — Google Maps manuell durchforsten, Kontakte in Excel kopieren. Teure Tools wie Apollo oder Hunter kosten €50+/Monat.</p><h2>Die Lösung</h2><p>Lead Finder Pro findet automatisch qualifizierte Geschäftskontakte aus OpenStreetMap — kostenlos, ohne API-Limits, mit intelligenter Filterung.</p><h2>Features</h2><ul><li>40+ Branchen (Gesundheit, Handwerk, IT, Gastronomie)</li><li>Standort-Suche mit Radius (AT/DE/CH)</li><li>Qualitäts-Filter: Nur mit Webseite, Email, Telefon</li><li>Website-Validierung: Prüft Erreichbarkeit automatisch</li><li>CSV-Export (Excel-kompatibel)</li><li>Dashboard mit Statistiken</li><li>Keine API Keys nötig</li><li>SQLite — keine Datenbank nötig</li><li>Shared Hosting kompatibel</li></ul>",
+    "welcome_page_text": "Danke für deinen Kauf! Unten findest du den Download-Link und die Installationsanleitung.",
+    "thank_you_page_text": "✅ Erledigt! Schau in dein Postfach für den Download-Link."
+  },
+
+  "lemonsqueezy": {
+    "product_name": "Lead Finder Pro",
+    "store_category": "saas",
+    "pricing_model": "one_time",
+    "price_cents": 4900,
+    "pay_what_you_want": false,
+    "min_price_cents": 2900,
+    "description_markdown": "# Lead Finder Pro\n\n**Automatisch qualifizierte Leads finden — ohne teure APIs.**\n\n## Features\n- 40+ Branchen vorkonfiguriert\n- Standort-Suche mit Radius (AT/DE/CH)\n- Qualitäts-Filter (Webseite, Email, Telefon)\n- Automatische Website-Validierung\n- CSV-Export (Excel-kompatibel)\n- Responsive Dashboard\n- Auth-System\n- Keine API Keys nötig\n\n## Was du bekommst\n- Kompletter Laravel 11 Source Code\n- Installationsanleitung (DE)\n- Shared Hosting kompatibel\n- Demo-Account zum Testen\n\n## Systemanforderungen\n- PHP 8.2+\n- SQLite\n- Apache/Nginx",
+    "license_type": "commercial",
+    "watermark": false,
+    "cover_image_prompt": "Professional SaaS dashboard interface showing a lead generation tool with search form, data table with business contacts, map pins, clean indigo and white color scheme, dark mode optional, minimalist tech-focused premium feel, no text --ar 4:3 --v 6",
+    "icon_image_prompt": "Minimalist lead finder icon, magnifying glass with user profile inside, indigo gradient background, clean vector style, professional SaaS aesthetic --ar 1:1 --v 6"
+  },
+
+  "paddle": {
+    "product_name": "Lead Finder Pro",
+    "product_type": "standard",
+    "product_category": "Software",
+    "base_price_eur": 49.00,
+    "setup_fee": 0,
+    "tax_category": "standard",
+    "vat_id_required": false,
+    "title": "Lead Finder Pro — Automatisch qualifizierte Leads finden",
+    "short_description": "Micro-SaaS für Lead-Generierung aus OpenStreetMap. 40+ Branchen, Filter, Validierung, CSV-Export.",
+    "delivery_method": "file_download",
+    "file_formats": ["zip"],
+    "description_html": "<h2>Lead Finder Pro</h2><p>Automatisch qualifizierte Geschäftskontakte finden — ohne Google Maps API, ohne teure Abos.</p><h3>Features</h3><ul><li>40+ Branchen</li><li>Standort-Suche mit Radius</li><li>Qualitäts-Filter</li><li>Website-Validierung</li><li>CSV-Export</li><li>Dashboard</li><li>Shared Hosting kompatibel</li></ul>"
+  },
+
+  "kopecart": {
+    "product_name": "Lead Finder Pro",
+    "german_title": "Lead Finder Pro — Automatisch qualifizierte Leads finden",
+    "german_description": "Micro-SaaS Tool für Lead-Generierung aus OpenStreetMap. Findet automatisch Geschäftskontakte in 40+ Branchen mit intelligenten Filtern (Webseite, Email, Telefon). Inklusive Website-Validierung, CSV-Export und Dashboard.",
+    "german_welcome_message": "Vielen Dank für deinen Kauf! Du findest deine Download-Link und Installationsanleitung weiter unten.",
+    "product_type": "digital_download",
+    "price_cents": 4900,
+    "installments_max": 0,
+    "trial_days": 0,
+    "delivery_type": "download",
+    "download_file": "lead-finder-pro_v1.zip",
+    "order_bump_enabled": true,
+    "order_bump_name": "Lead Finder Pro — Premium Branchen Pack",
+    "order_bump_price_cents": 1900,
+    "order_bump_description": "20+ zusätzliche Branchen inkl. Immobilienmakler, Versicherungsmakler, Eventagenturen",
+    "upsell_enabled": false
+  },
+
+  "visuals": {
+    "cover_prompt": "Professional SaaS product thumbnail, clean minimalist design, indigo and white gradient, magnifying glass with business card icons floating, modern SaaS aesthetic, no text, ultra sharp --ar 4:3 --v 6",
+    "og_prompt": "Professional product launch card, Lead Finder Pro dashboard mockup on laptop screen, clean indigo theme, premium minimalist design, subtle 'Lead Finder Pro' watermark, modern flat design --ar 1.91:1 --v 6",
+    "square_prompt": "Eye-catching digital product showcase, centered magnifying glass icon with user profiles, bold indigo-to-purple gradient background, premium minimalist design --ar 1:1 --v 6"
+  },
+
+  "seo": {
+    "primary_keywords": ["lead generation", "lead finder", "business contacts", "openstreetmap tool", "php saas"],
+    "long_tail_keywords": [
+      "lead generation tool for freelancers",
+      "find business contacts without api",
+      "openstreetmap lead scraper",
+      "german lead generation software",
+      "qualifizierte leads finden tool"
+    ],
+    "tags": ["laravel", "saas", "lead-generation", "business-contacts", "openstreetmap", "php", "crm", "marketing", "freelancer", "b2b", "germany", "austria", "switzerland", "shared-hosting"],
+    "platform_categories": {
+      "gumroad": "software",
+      "etsy": "digital downloads",
+      "digistore24": "Software & Dienstleistungen",
+      "lemonsqueezy": "saas",
+      "paddle": "Software"
+    }
+  },
+
+  "post_purchase": {
+    "welcome_email_subject": "Dein Lead Finder Pro — Download & Installation",
+    "welcome_email_body": "Hallo,\n\nvielen Dank für deinen Kauf von Lead Finder Pro!\n\nDOWNLOAD: [Link zur ZIP]\n\nINSTALLATION:\n1. ZIP auf deinen Server hochladen\n2. Entpacken: unzip lead-finder-pro_v1.zip\n3. composer install --no-dev --optimize-autoloader\n4. cp .env.example .env && php artisan key:generate\n5. touch storage/database.sqlite\n6. php artisan migrate --seed\n7. chmod -R 775 storage bootstrap/cache\n8. Fertig! → Login: demo@example.com / password\n\nBei Fragen einfach reply.\n\nViel Erfolg!\nDein Lead Finder Pro Team",
+    "onboarding_steps": [
+      "ZIP herunterladen und auf Server entpacken",
+      "Dependencies installieren (composer install)",
+      ".env konfigurieren und Key generieren",
+      "Datenbank migrieren (php artisan migrate --seed)",
+      "Permissions setzen (chmod 775 storage)",
+      "Ersten Login durchführen",
+      "Erste Suche starten"
+    ]
+  }
+}

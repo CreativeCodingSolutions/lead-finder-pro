@@ -1,0 +1,66 @@
+================================================================================
+LEAD FINDER PRO — Micro-SaaS für Lead-Generierung
+================================================================================
+
+SEO TITLE (max 140 chars):
+Lead Finder Pro — Laravel Micro-SaaS | Automatisch Leads finden & exportieren
+
+DESCRIPTION:
+Lead Finder Pro ist ein leistungsstarkes Laravel-basiertes Micro-SaaS Tool,
+das Unternehmern und Freelancern hilft, qualifizierte Geschäftskontakte
+automatisch zu finden — direkt aus OpenStreetMap (Overpass API).
+
+KEINE Google Maps API, KEINE teuren Abos, KEINE Limits.
+
+Mit 40+ vorkonfigurierten Branchen, intelligenten Filtern (nur mit Webseite,
+Email, Telefon), automatischer Website-Validierung und CSV-Export.
+
+Ideal für:
+- Marketing Agenturen die Leads für Kunden beschaffen
+- Freelancer die neue Kunden suchen
+- Vertriebsteams die Adressen brauchen
+- Webdesigner die potenzielle Kunden finden wollen
+
+Features:
+✓ 40+ Branchen (Gesundheit, Handwerk, IT, Gastronomie, etc.)
+✓ Standort-Suche mit Radius (AT/DE/CH)
+✓ Qualitäts-Filter (Webseite, Email, Telefon, Name)
+✓ Website-Validierung (prüft ob Seiten erreichbar sind)
+✓ CSV-Export (Excel-kompatibel)
+✓ Dashboard mit Statistiken
+✓ Responsive Design (Mobile + Desktop)
+✓ Auth-System (Registrierung/Login)
+✓ Keine API Keys nötig — nutzt OpenStreetMap
+✓ SQLite — keine MySQL-Datenbank nötig
+✓ Shared Hosting kompatibel
+
+Was du bekommst:
+- Kompletter Laravel 11 Source Code
+- Installationsanleitung (Shared Hosting + VPS)
+- Demo-Account zum Testen
+- 40+ vorkonfigurierte Branchen
+- Sauberer, kommentierter Code
+
+Systemanforderungen: PHP 8.2+, SQLite, Apache/Nginx
+
+TAGS (13):
+laravel, saas, lead generation, lead finder, business contacts,
+openstreetmap, overpass api, php tool, crm tool, marketing tool,
+contact scraper, b2b leads, small business
+
+================================================================================
+MIDJOURNEY PROMPT FOR COVER IMAGE:
+================================================================================
+Professional SaaS dashboard interface showing a lead generation tool with
+a search form, data table with business contacts, map pins, and filter
+options. Clean modern UI, indigo and white color scheme, dark mode
+optional. Minimalist, tech-focused, premium feel. --ar 16:9 --v 6
+
+================================================================================
+PRICING SUGGESTION:
+================================================================================
+Gumroad: €49-79 (Einzellizenz)
+Etsy: €39-59 (digital download)
+Own website: €99 (mit Support)
+
+================================================================================

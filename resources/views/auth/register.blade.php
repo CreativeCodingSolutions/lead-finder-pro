@@ -1,0 +1,52 @@
+@extends('layouts.app')
+@section('title', 'Registrieren - Lead Finder Pro')
+
+<div class="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-50 to-blue-50 px-4">
+    <div class="max-w-md w-full">
+        <div class="text-center mb-8">
+            <i class="fa-solid fa-magnifying-glass-chart text-primary text-5xl mb-4"></i>
+            <h1 class="text-3xl font-bold text-gray-900">Konto erstellen</h1>
+            <p class="text-gray-500 mt-2">Finde jetzt qualifizierte Leads</p>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-lg p-8">
+            <form method="POST" action="{{ route('register') }}" class="space-y-5">
+                @csrf
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                    <input type="text" name="name" value="{{ old('name') }}" required
+                        class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition"
+                        placeholder="Max Mustermann">
+                    @error('name') <p class="text-red-500 text-xs mt-1">{{ $message }}</p> @enderror
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                    <input type="email" name="email" value="{{ old('email') }}" required
+                        class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition"
+                        placeholder="deine@email.at">
+                    @error('email') <p class="text-red-500 text-xs mt-1">{{ $message }}</p> @enderror
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Passwort</label>
+                    <input type="password" name="password" required minlength="8"
+                        class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition"
+                        placeholder="Mindestens 8 Zeichen">
+                    @error('password') <p class="text-red-500 text-xs mt-1">{{ $message }}</p> @enderror
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Passwort bestätigen</label>
+                    <input type="password" name="password_confirmation" required
+                        class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition"
+                        placeholder="••••••••">
+                </div>
+                <button type="submit" class="w-full bg-primary text-white py-2.5 rounded-lg font-medium hover:bg-secondary transition">
+                    Registrieren
+                </button>
+            </form>
+
+            <p class="text-center text-sm text-gray-500 mt-6">
+                Bereits registriert? <a href="{{ route('login') }}" class="text-primary font-medium hover:underline">Anmelden</a>
+            </p>
+        </div>
+    </div>
+</div>
