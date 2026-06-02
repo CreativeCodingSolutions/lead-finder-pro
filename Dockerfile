@@ -1,18 +1,26 @@
-FROM composer:2.7 AS composer
-WORKDIR /app
-COPY composer.json composer.lock ./
-RUN composer install --no-dev --optimize-autoloader --no-scripts
+FROM php:8.2-cli
 
-FROM php:8.2-fpm-alpine
-RUN apk add --no-cache nginx supervisor sqlite libpng libjpeg-turbo freetype libzip \
-    && docker-php-ext-install pdo pdo_sqlite gd zip opcache
+RUN apt-get update && apt-get install -y nginx supervisor sqlite3 \
+    && docker-php-ext-install pdo pdo_sqlite \
+    && rm -rf /var/lib/apt/lists/*
+
 WORKDIR /var/www
-COPY --from=composer /app/vendor ./vendor
+
+# Copy everything (vendor included)
 COPY . .
-RUN chown -R www-data:www-data storage bootstrap/cache \
-    && chmod -R 775 storage bootstrap/cache \
-    && php artisan key:generate --force || true
-COPY docker/nginx.conf /etc/nginx/http.d/default.conf
-COPY docker/supervisord.conf /etc/supervisord.conf
+
+# Set permissions
+RUN mkdir -p storage/framework/views storage/framework/cache storage/app bootstrap/cache \
+    && chown -R www-data:www-data storage bootstrap/cache \
+    && chmod -R 775 storage bootstrap/cache
+
+# Copy nginx and supervisor configs
+COPY docker/nginx.conf /etc/nginx/sites-available/default 2>/dev/null || true
+COPY docker/supervisord.conf /etc/supervisord.conf 2>/dev/null || true
+
+# Generate key
+RUN php artisan key:generate --force || true
+
 EXPOSE 8080
-CMD ["supervisord", "-c", "/etc/supervisord.conf"]
+
+CMD php artisan serve --host=0.0.0.0 --port=8080
