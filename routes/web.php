@@ -7,21 +7,28 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LeadController;
 use App\Http\Controllers\SearchController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Auth\ForgotPasswordController;
+use App\Http\Controllers\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
 | Public Routes
 |--------------------------------------------------------------------------
 */
-Route::get('/', function () {
-    return redirect()->route('login');
-});
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::middleware('guest')->group(function () {
     Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
     Route::post('/login', [LoginController::class, 'login']);
     Route::get('/register', [RegisterController::class, 'showRegisterForm'])->name('register');
     Route::post('/register', [RegisterController::class, 'register']);
+
+    // Password Reset
+    Route::get('/forgot-password', [ForgotPasswordController::class, 'showLinkRequestForm'])->name('password.request');
+    Route::post('/forgot-password', [ForgotPasswordController::class, 'sendResetLinkEmail'])->name('password.email');
+    Route::get('/reset-password/{token}', [ForgotPasswordController::class, 'showResetForm'])->name('password.reset');
+    Route::post('/reset-password', [ForgotPasswordController::class, 'reset'])->name('password.update');
 });
 
 /*
@@ -31,6 +38,11 @@ Route::middleware('guest')->group(function () {
 */
 Route::middleware('auth')->group(function () {
     Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+
+    // Profile
+    Route::get('/profile', [ProfileController::class, 'show'])->name('profile.show');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::patch('/profile/password', [ProfileController::class, 'updatePassword'])->name('profile.password');
 
     // Dashboard
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');

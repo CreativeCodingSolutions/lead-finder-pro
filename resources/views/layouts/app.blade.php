@@ -44,7 +44,9 @@
                     </div>
                 </div>
                 <div class="flex items-center gap-3">
-                    <span class="text-sm text-gray-500 hidden sm:block">{{ Auth::user()->name }}</span>
+                    <a href="{{ route('profile.show') }}" class="text-sm text-gray-600 hover:text-primary transition">
+                        <i class="fa-solid fa-user-circle mr-1"></i>{{ Auth::user()->name }}
+                    </a>
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
                         <button type="submit" class="text-sm text-gray-500 hover:text-red-600 px-3 py-2">

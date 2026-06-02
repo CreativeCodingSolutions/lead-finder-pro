@@ -98,7 +98,7 @@ class SearchController extends Controller
             ]);
 
             return redirect()->route('search.results', $search)
-                ->with('success', "{$inserte} neue Leads gefunden" . ($skipped > 0 ? " ({$skipped} Duplikate übersprungen)" : ''));
+                ->with('success', "{$inserted} neue Leads gefunden" . ($skipped > 0 ? " ({$skipped} Duplikate übersprungen)" : ''));
 
         } catch (\Exception $e) {
             $search->update(['status' => 'failed']);

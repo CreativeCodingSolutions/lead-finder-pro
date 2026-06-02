@@ -25,9 +25,12 @@
                         class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition"
                         placeholder="••••••••">
                 </div>
-                <div class="flex items-center">
-                    <input type="checkbox" name="remember" id="remember" class="rounded border-gray-300 text-primary focus:ring-primary">
-                    <label for="remember" class="ml-2 text-sm text-gray-600">Angemeldet bleiben</label>
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                        <input type="checkbox" name="remember" id="remember" class="rounded border-gray-300 text-primary focus:ring-primary">
+                        <label for="remember" class="ml-2 text-sm text-gray-600">Angemeldet bleiben</label>
+                    </div>
+                    <a href="{{ route('password.request') }}" class="text-sm text-primary hover:underline">Passwort vergessen?</a>
                 </div>
                 <button type="submit" class="w-full bg-primary text-white py-2.5 rounded-lg font-medium hover:bg-secondary transition">
                     Anmelden
