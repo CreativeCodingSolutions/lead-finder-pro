@@ -8,6 +8,30 @@ use Illuminate\Support\Facades\Auth;
 
 class DashboardController extends Controller
 {
+    /**
+     * Get all available modules and their active/inactive status.
+     */
+    private function getModuleStatuses(): array
+    {
+        $modules = [];
+        $moduleFiles = glob(base_path('app/Modules/*/Module.php'));
+
+        foreach ($moduleFiles as $moduleFile) {
+            $moduleName = basename(dirname($moduleFile));
+            $config = require $moduleFile;
+            $modules[] = [
+                'name' => $config['name'] ?? $moduleName,
+                'description' => $config['description'] ?? '',
+                'version' => $config['version'] ?? '1.0.0',
+                'enabled' => $config['enabled'] ?? false,
+                'slug' => strtolower(str_replace(' ', '-', $moduleName)),
+                'key' => strtolower($moduleName),
+            ];
+        }
+
+        return $modules;
+    }
+
     public function index()
     {
         $userId = Auth::id();
@@ -22,6 +46,8 @@ class DashboardController extends Controller
             'recent_leads' => Lead::where('user_id', $userId)->latest()->take(10)->with('industry')->get(),
         ];
 
-        return view('dashboard', compact('stats'));
+        $modules = $this->getModuleStatuses();
+
+        return view('dashboard', compact('stats', 'modules'));
     }
 }

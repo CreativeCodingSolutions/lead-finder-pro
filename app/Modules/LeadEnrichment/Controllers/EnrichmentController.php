@@ -28,7 +28,8 @@ class EnrichmentController extends Controller
         $lead->update([
             'phone' => $lead->phone ?? '+49 30 ' . rand(1000000, 9999999),
             'email' => $lead->email ?? 'info@' . parse_url($lead->website ?? 'example.com', PHP_URL_HOST),
-            'address' => $lead->address ?? 'Berlin, Germany',            'enriched_at' => now(),
+            'address' => $lead->address ?? 'Berlin, Germany',
+            'enriched_at' => now(),
         ]);
 
         return back()->with('success', "Lead enriched: {$lead->company_name}");
@@ -44,7 +45,8 @@ class EnrichmentController extends Controller
             $lead->update([
                 'phone' => $lead->phone ?? '+49 30 ' . rand(1000000, 9999999),
                 'email' => $lead->email ?? 'info@' . parse_url($lead->website ?? 'example.com', PHP_URL_HOST),
-                'address' => $lead->address ?? 'Berlin, Germany',                'enriched_at' => now(),
+                'address' => $lead->address ?? 'Berlin, Germany',
+                'enriched_at' => now(),
             ]);
             $count++;
         }

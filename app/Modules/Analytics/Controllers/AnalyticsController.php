@@ -38,7 +38,7 @@ class AnalyticsController extends Controller
         $withWebsite = Lead::where('user_id', $userId)->where('has_website', true)->count();
         $withEmail = Lead::where('user_id', $userId)->where('has_email', true)->count();
         $validated = Lead::where('user_id', $userId)->where('website_valid', true)->count();
-        $total = Lead::where('user_id', $userId)->count;
+        $total = Lead::where('user_id', $userId)->count();
 
         return view('modules.analytics.index', compact(
             'leadsOverTime', 'successRate', 'topIndustries',

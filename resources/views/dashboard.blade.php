@@ -200,4 +200,48 @@
         @endif
     </div>
 </div>
+
+<!-- Module Status -->
+<div class="bg-white rounded-xl shadow-sm border p-6 mt-8">
+    <h2 class="text-lg font-semibold mb-4"><i class="fa-solid fa-cubes text-indigo-500 mr-2"></i>Modul-Status</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+        @foreach($modules as $module)
+        <div class="flex items-center gap-3 p-3 rounded-lg {{ $module['enabled'] ? 'bg-green-50 border border-green-200' : 'bg-gray-50 border border-gray-200 opacity-60' }}">
+            <div class="w-8 h-8 rounded-lg flex items-center justify-center {{ $module['enabled'] ? 'bg-green-100' : 'bg-gray-200' }}">
+                @if(strtolower($module['key']) === 'analytics')
+                    <i class="fa-solid fa-chart-line {{ $module['enabled'] ? 'text-green-600' : 'text-gray-400' }}"></i>
+                @elseif(strtolower($module['key']) === 'exportenhanced')
+                    <i class="fa-solid fa-file-export {{ $module['enabled'] ? 'text-green-600' : 'text-gray-400' }}"></i>
+                @elseif(strtolower($module['key']) === 'leadenrichment')
+                    <i class="fa-solid fa-wand-magic-sparkles {{ $module['enabled'] ? 'text-green-600' : 'text-gray-400' }}"></i>
+                @elseif(strtolower($module['key']) === 'notifications')
+                    <i class="fa-solid fa-bell {{ $module['enabled'] ? 'text-green-600' : 'text-gray-400' }}"></i>
+                @elseif(strtolower($module['key']) === 'apiaccess')
+                    <i class="fa-solid fa-key {{ $module['enabled'] ? 'text-green-600' : 'text-gray-400' }}"></i>
+                @elseif(strtolower($module['key']) === 'stripe')
+                    <i class="fa-brands fa-stripe {{ $module['enabled'] ? 'text-green-600' : 'text-gray-400' }}"></i>
+                @elseif(strtolower($module['key']) === 'emailverification')
+                    <i class="fa-solid fa-envelope-circle-check {{ $module['enabled'] ? 'text-green-600' : 'text-gray-400' }}"></i>
+                @elseif(strtolower($module['key']) === 'passwordreset')
+                    <i class="fa-solid fa-lock {{ $module['enabled'] ? 'text-green-600' : 'text-gray-400' }}"></i>
+                @else
+                    <i class="fa-solid fa-puzzle-piece {{ $module['enabled'] ? 'text-green-600' : 'text-gray-400' }}"></i>
+                @endif
+            </div>
+            <div class="flex-1 min-w-0">
+                <p class="text-sm font-medium text-gray-900 truncate">{{ $module['name'] }}</p>
+                <p class="text-xs text-gray-500">v{{ $module['version'] }}</p>
+            </div>
+            <span class="px-2 py-0.5 rounded-full text-xs font-medium {{ $module['enabled'] ? 'bg-green-100 text-green-700' : 'bg-gray-100 text-gray-500' }}">
+                {{ $module['enabled'] ? 'Aktiv' : 'Inaktiv' }}
+            </span>
+        </div>
+        @endforeach
+    </div>
+    <div class="mt-3 flex items-center gap-4 text-xs text-gray-400">
+        <span><i class="fa-solid fa-circle text-green-500 text-[8px] mr-1"></i>Aktiv: {{ collect($modules)->where('enabled', true)->count() }}</span>
+        <span><i class="fa-solid fa-circle text-gray-300 text-[8px] mr-1"></i>Inaktiv: {{ collect($modules)->where('enabled', false)->count() }}</span>
+        <span><i class="fa-solid fa-layer-group mr-1"></i>Gesamt: {{ count($modules) }}</span>
+    </div>
+</div>
 @endsection
