@@ -62,15 +62,15 @@ Route::middleware('auth')->group(function () {
     Route::post('/leads/validate-all', [LeadController::class, 'validateAll'])->name('leads.validate-all');
     Route::delete('/leads/{lead}', [LeadController::class, 'destroy'])->name('leads.destroy');
 
-    // Pricing
-    Route::get('/pricing', function () { return view('pricing'); })->name('pricing');
-
     // Stripe Checkout
     Route::post('/checkout', [StripeController::class, 'checkout'])->name('checkout');
     Route::get('/checkout/success', [StripeController::class, 'success'])->name('checkout.success');
     Route::get('/checkout/cancel', [StripeController::class, 'cancel'])->name('checkout.cancel');
     Route::post('/subscription/cancel', [StripeController::class, 'subscriptionCancel'])->name('subscription.cancel');
 });
+
+// Public Pricing Page
+Route::get('/pricing', function () { return view('pricing'); })->name('pricing');
 
 // Stripe Webhook (no CSRF, no session)
 Route::post('/webhook/stripe', [StripeController::class, 'webhook'])->name('webhook.stripe');
