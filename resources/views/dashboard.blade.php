@@ -201,6 +201,45 @@
     </div>
 </div>
 
+<!-- Export Scheduler Widget -->
+@if(env('FEATURE_EXPORT_SCHEDULER', false))
+<div class="bg-white rounded-xl shadow-sm border p-6 mt-8">
+    <div class="flex items-center justify-between mb-4">
+        <h2 class="text-lg font-semibold"><i class="fa-solid fa-clock text-indigo-500 mr-2"></i>Export Scheduler</h2>
+        <a href="{{ route('exports.schedule.index') }}" class="text-sm text-indigo-600 hover:underline">Alle anzeigen</a>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="flex items-center gap-3 p-3 bg-green-50 border border-green-200 rounded-lg">
+            <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
+                <i class="fa-solid fa-calendar-check text-green-600"></i>
+            </div>
+            <div>
+                <p class="text-lg font-bold text-gray-900">2</p>
+                <p class="text-xs text-gray-500">Aktive Schedules</p>
+            </div>
+        </div>
+        <div class="flex items-center gap-3 p-3 bg-blue-50 border border-blue-200 rounded-lg">
+            <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+                <i class="fa-solid fa-file-csv text-blue-600"></i>
+            </div>
+            <div>
+                <p class="text-lg font-bold text-gray-900">Wöchentlich</p>
+                <p class="text-xs text-gray-500">Häufigste Frequenz</p>
+            </div>
+        </div>
+        <div class="flex items-center gap-3 p-3 bg-purple-50 border border-purple-200 rounded-lg">
+            <div class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
+                <i class="fa-solid fa-clock-rotate-left text-purple-600"></i>
+            </div>
+            <div>
+                <p class="text-lg font-bold text-gray-900">In 3 Tagen</p>
+                <p class="text-xs text-gray-500">Nächster Export</p>
+            </div>
+        </div>
+    </div>
+</div>
+@endif
+
 <!-- Module Status -->
 <div class="bg-white rounded-xl shadow-sm border p-6 mt-8">
     <h2 class="text-lg font-semibold mb-4"><i class="fa-solid fa-cubes text-indigo-500 mr-2"></i>Modul-Status</h2>
@@ -224,6 +263,8 @@
                     <i class="fa-solid fa-envelope-circle-check {{ $module['enabled'] ? 'text-green-600' : 'text-gray-400' }}"></i>
                 @elseif(strtolower($module['key']) === 'passwordreset')
                     <i class="fa-solid fa-lock {{ $module['enabled'] ? 'text-green-600' : 'text-gray-400' }}"></i>
+                @elseif(strtolower($module['key']) === 'exportscheduler')
+                    <i class="fa-solid fa-clock {{ $module['enabled'] ? 'text-green-600' : 'text-gray-400' }}"></i>
                 @else
                     <i class="fa-solid fa-puzzle-piece {{ $module['enabled'] ? 'text-green-600' : 'text-gray-400' }}"></i>
                 @endif
