@@ -1,7 +1,7 @@
 <?php
 // app/Modules/EmailVerification/routes.php
 
-use Illuminate\Support\Facade\Route;
+use Illuminate\Support\Facades\Route;
 
 // EmailVerification feature routes
 // TODO: Implement EmailVerification routes

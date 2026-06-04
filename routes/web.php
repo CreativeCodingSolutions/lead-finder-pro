@@ -80,7 +80,8 @@ $modules = glob(base_path('app/Modules/*/routes.php'));
 foreach ($modules as $routes) {
     $moduleName = basename(dirname($routes));
     $envKey = 'FEATURE_' . strtoupper($moduleName);
-    if (env($envKey, false)) {
+    $isEnabled = env($envKey, false) || config('modules.' . strtolower($moduleName), false);
+    if ($isEnabled) {
         require $routes;
     }
 }

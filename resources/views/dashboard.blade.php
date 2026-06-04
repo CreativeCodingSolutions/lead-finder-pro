@@ -240,6 +240,45 @@
 </div>
 @endif
 
+<!-- Collaboration Widget -->
+@if(env('FEATURE_COLLABORATION', false))
+<div class="bg-white rounded-xl shadow-sm border p-6 mt-8">
+    <div class="flex items-center justify-between mb-4">
+        <h2 class="text-lg font-semibold"><i class="fa-solid fa-users text-indigo-500 mr-2"></i>Team Collaboration</h2>
+        <a href="{{ route('collaboration.index') }}" class="text-sm text-indigo-600 hover:underline">Team verwalten</a>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="flex items-center gap-3 p-3 bg-indigo-50 border border-indigo-200 rounded-lg">
+            <div class="w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center">
+                <i class="fa-solid fa-users text-indigo-600"></i>
+            </div>
+            <div>
+                <p class="text-lg font-bold text-gray-900">0</p>
+                <p class="text-xs text-gray-500">Team-Mitglieder</p>
+            </div>
+        </div>
+        <div class="flex items-center gap-3 p-3 bg-green-50 border border-green-200 rounded-lg">
+            <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
+                <i class="fa-solid fa-user-plus text-green-600"></i>
+            </div>
+            <div>
+                <p class="text-lg font-bold text-gray-900">0</p>
+                <p class="text-xs text-gray-500">Offene Einladungen</p>
+            </div>
+        </div>
+        <div class="flex items-center gap-3 p-3 bg-purple-50 border border-purple-200 rounded-lg">
+            <div class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
+                <i class="fa-solid fa-share-nodes text-purple-600"></i>
+            </div>
+            <div>
+                <p class="text-lg font-bold text-gray-900">Geteilt</p>
+                <p class="text-xs text-gray-500">Zugriffsmodus</p>
+            </div>
+        </div>
+    </div>
+</div>
+@endif
+
 <!-- Module Status -->
 <div class="bg-white rounded-xl shadow-sm border p-6 mt-8">
     <h2 class="text-lg font-semibold mb-4"><i class="fa-solid fa-cubes text-indigo-500 mr-2"></i>Modul-Status</h2>
@@ -265,6 +304,8 @@
                     <i class="fa-solid fa-lock {{ $module['enabled'] ? 'text-green-600' : 'text-gray-400' }}"></i>
                 @elseif(strtolower($module['key']) === 'exportscheduler')
                     <i class="fa-solid fa-clock {{ $module['enabled'] ? 'text-green-600' : 'text-gray-400' }}"></i>
+                @elseif(strtolower($module['key']) === 'collaboration')
+                    <i class="fa-solid fa-users {{ $module['enabled'] ? 'text-green-600' : 'text-gray-400' }}"></i>
                 @else
                     <i class="fa-solid fa-puzzle-piece {{ $module['enabled'] ? 'text-green-600' : 'text-gray-400' }}"></i>
                 @endif

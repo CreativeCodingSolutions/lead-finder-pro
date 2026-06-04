@@ -10,6 +10,7 @@ class DashboardController extends Controller
 {
     /**
      * Get all available modules and their active/inactive status.
+     * Supports both array-based and class-based Module.php files.
      */
     private function getModuleStatuses(): array
     {
@@ -19,14 +20,35 @@ class DashboardController extends Controller
         foreach ($moduleFiles as $moduleFile) {
             $moduleName = basename(dirname($moduleFile));
             $config = require $moduleFile;
-            $modules[] = [
-                'name' => $config['name'] ?? $moduleName,
-                'description' => $config['description'] ?? '',
-                'version' => $config['version'] ?? '1.0.0',
-                'enabled' => $config['enabled'] ?? false,
-                'slug' => strtolower(str_replace(' ', '-', $moduleName)),
-                'key' => strtolower($moduleName),
-            ];
+
+            // Array-based Module.php (config array with 'name', 'description', 'enabled', etc.)
+            if (is_array($config)) {
+                $modules[] = [
+                    'name' => $config['name'] ?? $moduleName,
+                    'description' => $config['description'] ?? '',
+                    'version' => $config['version'] ?? '1.0.0',
+                    'enabled' => $config['enabled'] ?? false,
+                    'slug' => strtolower(str_replace(' ', '-', $moduleName)),
+                    'key' => strtolower($moduleName),
+                ];
+            }
+            // Class-based Module.php (returns a class with isEnabled(), name(), etc.)
+            elseif (class_exists('App\\Modules\\' . $moduleName . '\\Module')) {
+                $className = 'App\\Modules\\' . $moduleName . '\\Module';
+                $isEnabled = method_exists($className, 'isEnabled')
+                    ? $className::isEnabled()
+                    : (method_exists($className, 'enabled') ? $className::enabled() : false);
+                $name = method_exists($className, 'name') ? $className::name() : $moduleName;
+
+                $modules[] = [
+                    'name' => $name,
+                    'description' => '',
+                    'version' => '1.0.0',
+                    'enabled' => $isEnabled,
+                    'slug' => strtolower(str_replace(' ', '-', $moduleName)),
+                    'key' => strtolower($moduleName),
+                ];
+            }
         }
 
         return $modules;
