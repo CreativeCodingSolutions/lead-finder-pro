@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  leadfinderpro:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    environment:
+      - APP_ENV=production
+      - APP_DEBUG=false
+      - APP_URL=https://leadfinderpro.creativecoding.cloud
+    volumes:
+      - lfp-storage:/var/www/storage
+      - lfp-database:/var/www/database
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.leadfinderpro.rule=Host(`leadfinderpro.creativecoding.cloud`)"
+      - "traefik.http.routers.leadfinderpro.entrypoints=websecure"
+      - "traefik.http.routers.leadfinderpro.tls.certresolver=letsencrypt"
+      - "traefik.http.services.leadfinderpro.loadbalancer.server.port=10000"
+    healthcheck:
+      test: ["CMD", "php", "artisan", "route:list"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+volumes:
+  lfp-storage:
+  lfp-database:
+
+networks:
+  default:
+    name: traefik
+    external: true
