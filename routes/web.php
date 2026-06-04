@@ -10,6 +10,7 @@ use App\Http\Controllers\SearchController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\DemoController;
 use App\Http\Controllers\StripeController;
 
 /*
@@ -18,6 +19,15 @@ use App\Http\Controllers\StripeController;
 |--------------------------------------------------------------------------
 */
 Route::get('/', [HomeController::class, 'index'])->name('home');
+
+// Demo — public search demo (no login required)
+Route::get('/demo', [DemoController::class, 'index'])->name('demo.index');
+Route::post('/demo/search', [DemoController::class, 'search'])->name('demo.search');
+
+// Legal Pages
+Route::get('/impressum', function () { return view('legal.impressum'); })->name('legal.impressum');
+Route::get('/datenschutz', function () { return view('legal.datenschutz'); })->name('legal.datenschutz');
+Route::get('/agb', function () { return view('legal.agb'); })->name('legal.agb');
 
 Route::middleware('guest')->group(function () {
     Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
@@ -85,3 +95,6 @@ foreach ($modules as $routes) {
         require $routes;
     }
 }
+
+// Sitemap
+require base_path('routes/sitemap.php');

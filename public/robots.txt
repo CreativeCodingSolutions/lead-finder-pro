@@ -1,2 +1,15 @@
 User-agent: *
-Disallow: /
+Allow: /
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /search/
+Disallow: /leads/
+Disallow: /api/
+Disallow: /login/
+Disallow: /register/
+Disallow: /forgot-password/
+Disallow: /reset-password/
+Disallow: /email/verify/
+Disallow: /email/resend/
+
+Sitemap: https://leadfinderpro.creativecoding.cloud/sitemap.xml
