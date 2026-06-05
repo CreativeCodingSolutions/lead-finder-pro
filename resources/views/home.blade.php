@@ -74,6 +74,7 @@
                 <span class="text-lg font-semibold text-gray-900">LeadFinderPro</span>
             </div>
             <div class="flex items-center gap-6 text-sm">
+                <a href="/demo" class="text-gray-600 hover:text-gray-900 font-medium">Demo</a>
                 <a href="#funktionsweise" class="text-gray-600 hover:text-gray-900">So funktioniert's</a>
                 <a href="#branchen" class="text-gray-600 hover:text-gray-900">Branchen</a>
                 <a href="#preise" class="text-gray-600 hover:text-gray-900">Preise</a>
@@ -98,8 +99,8 @@
                 <a href="/register" class="bg-indigo-600 text-white px-6 py-3 rounded-lg text-base font-medium hover:bg-indigo-700 text-center">
                     Kostenlos testen
                 </a>
-                <a href="#funktionsweise" class="border border-gray-300 text-gray-700 px-6 py-3 rounded-lg text-base font-medium hover:bg-gray-50 text-center">
-                    Mehr erfahren
+                <a href="/demo" class="border border-gray-300 text-gray-700 px-6 py-3 rounded-lg text-base font-medium hover:bg-gray-50 text-center">
+                    Demo ansehen
                 </a>
             </div>
             <p class="text-sm text-gray-500">✓ 3 Suchläufe kostenlos &nbsp; ✓ Keine Kreditkarte &nbsp; ✓ DSGVO-konform</p>
