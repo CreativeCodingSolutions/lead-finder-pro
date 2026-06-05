@@ -17,6 +17,11 @@
     <meta property="og:url" content="@yield('og_url', url()->current())">
     <meta property="og:locale" content="de_DE">
     <meta property="og:site_name" content="LeadFinderPro">
+    <meta property="og:image" content="https://leadfinderpro.creativecoding.cloud/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="LeadFinderPro — Branchen-Leads für Ihren Vertrieb in 2 Minuten">
+    <meta name="twitter:card" content="summary_large_image">
     @yield('og_tags')
 
     <!-- Schema.org Organization -->
@@ -27,11 +32,13 @@
         "name": "CreativeCodingSolutions",
         "url": "https://creativecoding.cloud",
         "logo": "https://creativecoding.cloud/logo.png",
-        "sameAs": [],
+        "sameAs": [
+            "https://github.com/creativecoding"
+        ],
         "contactPoint": {
             "@type": "ContactPoint",
-            "contactPoint": "customer service",
-            "availableLanguage": "German"
+            "contactType": "customer service",
+            "availableLanguage": ["German", "English"]
         }
     }
     </script>

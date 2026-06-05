@@ -16,6 +16,13 @@
     <meta property="og:url" content="https://leadfinderpro.creativecoding.cloud/">
     <meta property="og:locale" content="de_DE">
     <meta property="og:site_name" content="LeadFinderPro">
+    <meta property="og:image" content="https://leadfinderpro.creativecoding.cloud/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="LeadFinderPro — Branchen-Leads für Ihren Vertrieb in 2 Minuten">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Branchen-Leads für Ihren Vertrieb in 2 Minuten | LeadFinderPro">
+    <meta name="twitter:description" content="Finden Sie qualifizierte Leads aus OpenStreetMap — nach Branche und Ort. Für Marketing-Agenturen und Vertriebsteams in DACH.">
 
     <!-- Schema.org -->
     <script type="application/ld+json">
@@ -25,11 +32,13 @@
         "name": "LeadFinderPro",
         "applicationCategory": "BusinessApplication",
         "operatingSystem": "Web",
-        "description": "Lead-Generierung für Marketing-Agenturen und Vertriebsteams. Finden Sie Branchen-Leads aus OpenStreetMap nach Ort und Branche.",
+        "description": "Lead-Generierung für Marketing-Agenturen und Vertriebsteams. Finden Sie Branchen-Leads aus OpenStreetMap nach Ort und Branche. DACH-Fokus.",
         "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "EUR"
+            "@type": "AggregateOffer",
+            "lowPrice": "0",
+            "highPrice": "99",
+            "priceCurrency": "EUR",
+            "offerCount": "3"
         },
         "creator": {
             "@type": "Organization",
@@ -40,6 +49,55 @@
             {"@type": "Country", "name": "Deutschland"},
             {"@type": "Country", "name": "Österreich"},
             {"@type": "Country", "name": "Schweiz"}
+        ]
+    }
+    </script>
+    <!-- Schema.org FAQ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Woher kommen die Lead-Daten?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Alle Daten stammen aus OpenStreetMap (OSM), der freien Weltkarte. Die Daten werden von Freiwilligen gepflegt und sind öffentlich verfügbar. Wir aggregieren und strukturieren sie für Ihre Lead-Recherche."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Kann ich die Leads in mein CRM importieren?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ja, LeadFinderPro bietet CSV-Export kompatibel mit HubSpot, Salesforce, Pipedrive und anderen gängigen CRM-Systemen. Pro- und Business-Nutzer können auch die API nutzen."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Ist LeadFinderPro DSGVO-konform?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Wir verarbeiten nur öffentlich verfügbare Daten aus OpenStreetMap. Für die konforme Nutzung im Marketing (z.B. E-Mail-Versand) sind Sie selbst verantwortlich und müssen die Einwilligung der Kontakte einholen."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Welche Länder werden unterstützt?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Wir unterstützen Deutschland, Österreich und Schweiz (DACH). Weitere Länder auf Anfrage."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Wie viele Suchen kann ich kostenlos machen?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Im kostenlosen Plan erhalten Sie 3 Suchläufe pro Monat mit bis zu 50 Ergebnissen pro Suche. Keine Kreditkarte erforderlich."
+                }
+            }
         ]
     }
     </script>
