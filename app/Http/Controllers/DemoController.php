@@ -8,6 +8,27 @@ use Illuminate\Http\Request;
 class DemoController extends Controller
 {
     /**
+     * Country-specific demo data configuration
+     */
+    private const COUNTRY_CONFIG = [
+        'DE' => [
+            'phone_prefix' => '+49',
+            'city_examples' => ['Berlin', 'München', 'Hamburg', 'Köln', 'Frankfurt'],
+            'postal_code_format' => 'german', // 5 digits
+        ],
+        'AT' => [
+            'phone_prefix' => '+43',
+            'city_examples' => ['Wien', 'Graz', 'Linz', 'Salzburg', 'Innsbruck'],
+            'postal_code_format' => 'austrian', // 4 digits
+        ],
+        'CH' => [
+            'phone_prefix' => '+41',
+            'city_examples' => ['Zürich', 'Genf', 'Basel', 'Bern', 'Lausanne'],
+            'postal_code_format' => 'swiss', // 4 digits
+        ],
+    ];
+
+    /**
      * Show the public search demo page
      */
     public function index()
@@ -34,7 +55,7 @@ class DemoController extends Controller
         $city = $validated['city'];
         $country = strtoupper($validated['country']);
 
-        // Generate realistic sample leads based on industry + city
+        // Generate realistic sample leads based on industry + city + country
         $sampleLeads = $this->generateSampleLeads($industry, $city, $country);
 
         return view('demo.results', [
@@ -49,29 +70,68 @@ class DemoController extends Controller
     private function generateSampleLeads(Industry $industry, string $city, string $country): array
     {
         $leads = [];
-        $baseNames = [
-            'Hausarztpraxis', 'Zahnarztpraxis', 'Physiotherapie', 'Augenarztpraxis',
-            'Dermatologie', 'Orthopädie', 'HNO-Praxis', 'Praxis für Allgemeinmedizin',
+
+        $config = self::COUNTRY_CONFIG[$country] ?? self::COUNTRY_CONFIG['DE'];
+        $phonePrefix = $config['phone_prefix'];
+
+        // Country-specific base names for demo leads
+        $baseNamesByCountry = [
+            'DE' => [
+                'Hausarztpraxis', 'Zahnarztpraxis', 'Physiotherapie', 'Augenarztpraxis',
+                'Dermatologie', 'Orthopädie', 'HNO-Praxis', 'Praxis für Allgemeinmedizin',
+            ],
+            'AT' => [
+                'Ordination Dr.', 'Zahnarztpraxis', 'Physiotherapie', 'Augenarztpraxis',
+                'Dermatologie', 'Orthopädie', 'HNO-Arzt', 'Allgemeinmedizin',
+            ],
+            'CH' => [
+                'Praxis Dr.', 'Zahnzentrum', 'Physiotherapie', 'Augenklinik',
+                'Dermatologie', 'Orthopädie', 'HNO-Praxis', 'Allgemeine Medizin',
+            ],
         ];
 
-        $streetNames = [
-            'Hauptstraße', 'Bahnhofstraße', 'Kirchgasse', 'Schulstraße',
-            'Gartenweg', 'Marktplatz', 'Mühlenweg', 'Lindenstraße',
+        $streetNamesByCountry = [
+            'DE' => [
+                'Hauptstraße', 'Bahnhofstraße', 'Kirchgasse', 'Schulstraße',
+                'Gartenweg', 'Marktplatz', 'Mühlenweg', 'Lindenstraße',
+            ],
+            'AT' => [
+                'Hauptstraße', 'Bahnhofstraße', 'Kirchengasse', 'Schulstraße',
+                'Gartenweg', 'Marktplatz', 'Mühlweg', 'Lindenstraße',
+            ],
+            'CH' => [
+                'Hauptstrasse', 'Bahnhofstrasse', 'Kirchgasse', 'Schulstrasse',
+                'Gartenweg', 'Marktplatz', 'Mühlenweg', 'Lindenstrasse',
+            ],
         ];
+
+        $tldByCountry = [
+            'DE' => '.de',
+            'AT' => '.at',
+            'CH' => '.ch',
+        ];
+
+        $baseNames = $baseNamesByCountry[$country] ?? $baseNamesByCountry['DE'];
+        $streetNames = $streetNamesByCountry[$country] ?? $streetNamesByCountry['DE'];
+        $tld = $tldByCountry[$country] ?? '.de';
+        $postalFormat = $config['postal_code_format'];
 
         for ($i = 0; $i < 5; $i++) {
             $name = $baseNames[$i % count($baseNames)] . ' ' . chr(65 + $i);
             $street = $streetNames[$i % count($streetNames)] . ' ' . ($i + 1) * 3;
 
+            // Generate country-appropriate postal code
+            $postalCode = $this->generatePostalCode($postalFormat);
+
             $leads[] = [
                 'name' => $name,
                 'address' => $street,
                 'city' => $city,
-                'postal_code' => rand(10, 99) . rand(100, 999),
+                'postal_code' => $postalCode,
                 'country' => $country,
-                'phone' => '+49 ' . rand(100, 999) . ' ' . rand(100000, 999999),
-                'website' => rand(0, 1) ? 'https://www.' . strtolower(str_replace([' ', 'ä', 'ö', 'ü', 'ß'], ['-', 'ae', 'oe', 'ue', 'ss'], $name)) . '.de' : null,
-                'email' => rand(0, 1) ? 'info@' . strtolower(str_replace([' ', 'ä', 'ö', 'ü', 'ß'], ['-', 'ae', 'oe', 'ue', 'ss'], $name)) . '.de' : null,
+                'phone' => $phonePrefix . ' ' . rand(100, 999) . ' ' . rand(100000, 999999),
+                'website' => rand(0, 1) ? 'https://www.' . strtolower(str_replace([' ', 'ä', 'ö', 'ü', 'ß'], ['-', 'ae', 'oe', 'ue', 'ss'], $name)) . $tld : null,
+                'email' => rand(0, 1) ? 'info@' . strtolower(str_replace([' ', 'ä', 'ö', 'ü', 'ß'], ['-', 'ae', 'oe', 'ue', 'ss'], $name)) . $tld : null,
                 'industry' => $industry->name,
                 'has_website' => rand(0, 1),
                 'has_email' => rand(0, 1),
@@ -80,5 +140,25 @@ class DemoController extends Controller
         }
 
         return $leads;
+    }
+
+    /**
+     * Generate a postal code matching the country format
+     */
+    private function generatePostalCode(string $format): string
+    {
+        switch ($format) {
+            case 'german':
+                // German: 5 digits, 10000-99999
+                return (string) rand(10000, 99999);
+            case 'austrian':
+                // Austrian: 4 digits, 1000-9999
+                return (string) rand(1000, 9999);
+            case 'swiss':
+                // Swiss: 4 digits, 1000-9999
+                return (string) rand(1000, 9999);
+            default:
+                return (string) rand(10000, 99999);
+        }
     }
 }
