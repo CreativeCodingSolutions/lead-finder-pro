@@ -79,7 +79,7 @@
                 "name": "Woher kommen die Lead-Daten?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Alle Daten stammen aus OpenStreetMap (OSM), der freien Weltkarte. Die Daten werden von Freiwilligen gepflegt und sind öffentlich verfügbar. Wir aggregieren und strukturieren sie für Ihre Lead-Recherche."
+                    "text": "Alle Daten stammen aus OpenStreetMap (OSM), der freien Weltkarte. Die Daten werden von Freiwilligen gepflegt und sind öffentlich verfügbar. Wir aggregieren und strukturieren sie für Ihre Lead-Generierung."
                 }
             },
             {
@@ -205,7 +205,7 @@
                         <i class="fa-solid fa-bullhorn text-indigo-600"></i>
                     </div>
                     <h3 class="font-semibold text-gray-900 mb-2">Marketing-Agenturen</h3>
-                    <p class="text-sm text-gray-600 leading-relaxed">Sie wollen lokale Kunden gewinnen und brauchen qualifizierte Leads. Stundenlang Googlen ist keine effiziente Strategie — automatisieren Sie Ihre Lead-Recherche.</p>
+                    <p class="text-sm text-gray-600 leading-relaxed">Sie wollen lokale Kunden gewinnen und brauchen qualifizierte Leads. Stundenlang Googlen ist keine effiziente Strategie — automatisieren Sie Ihre Lead-Generierung.</p>
                 </div>
                 <div class="bg-gray-50 rounded-lg p-6">
                     <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mb-4">
@@ -243,7 +243,7 @@
                 <div>
                     <div class="w-10 h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold mb-4">3</div>
                     <h3 class="font-semibold text-gray-900 mb-2">Exportieren & Anrufen</h3>
-                    <p class="text-sm text-gray-600">CSV-Export für Ihr CRM (HubSpot, Salesforce, Pipedrive). Pro- und Business-Nutzer können auch die API nutzen für automatische Workflows.</p>
+                    <p class="text-sm text-gray-600">CSV-Export für Ihr CRM (HubSpot, Salesforce, Pipedrive). Pro- und Business-Nutzer können auch die API nutzen für automatische Abläufe.</p>
                 </div>
             </div>
         </div>
@@ -252,7 +252,7 @@
     <!-- Branchen-Beispiele -->
     <section id="branchen" class="bg-white py-16">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-2xl font-bold text-gray-900 mb-3">Beliebte Branchen für Lead-Recherche</h2>
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">Beliebte Branchen für Lead-Generierung</h2>
             <p class="text-gray-600 mb-8">Diese Branchen suchen unsere Nutzer am häufigsten im DACH-Raum:</p>
 
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -385,7 +385,7 @@
             <div class="space-y-6">
                 <div>
                     <h3 class="font-semibold text-gray-900 mb-1">Woher kommen die Daten?</h3>
-                    <p class="text-sm text-gray-600">Aus OpenStreetMap (OSM), der freien Weltkarte. Die Daten werden von Freiwilligen gepflegt und sind frei verfügbar. Wir aggregieren und strukturieren sie für Ihre Lead-Recherche.</p>
+                    <p class="text-sm text-gray-600">Aus OpenStreetMap (OSM), der freien Weltkarte. Die Daten werden von Freiwilligen gepflegt und sind frei verfügbar. Wir aggregieren und strukturieren sie für Ihre Lead-Generierung.</p>
                 </div>
                 <div>
                     <h3 class="font-semibold text-gray-900 mb-1">Sind die Daten immer aktuell?</h3>
@@ -410,7 +410,7 @@
     <!-- CTA -->
     <section class="bg-indigo-600 py-16">
         <div class="max-w-3xl mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold text-white mb-4">Bereit für Ihre Lead-Recherche?</h2>
+            <h2 class="text-3xl font-bold text-white mb-4">Bereit für Ihre Lead-Generierung?</h2>
             <p class="text-indigo-100 mb-8">Testen Sie jetzt kostenlos. 3 Suchläufe ohne Kreditkarte.</p>
             <a href="/register" class="inline-block bg-white text-indigo-600 px-8 py-3 rounded-lg font-medium hover:bg-indigo-50 transition">
                 Kostenlos testen

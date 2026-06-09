@@ -79,9 +79,6 @@ Route::middleware('auth')->group(function () {
     Route::post('/subscription/cancel', [StripeController::class, 'subscriptionCancel'])->name('subscription.cancel');
 });
 
-// Public Pricing Page
-Route::get('/pricing', function () { return view('pricing'); })->name('pricing');
-
 // Stripe Webhook (no CSRF, no session)
 Route::post('/webhook/stripe', [StripeController::class, 'webhook'])->name('webhook.stripe');
 
@@ -95,6 +92,9 @@ foreach ($modules as $routes) {
         require $routes;
     }
 }
+
+// Public Pricing Page — MUST be after module loading so it takes precedence
+Route::get('/pricing', function () { return view('pricing'); })->name('pricing');
 
 // Sitemap
 require base_path('routes/sitemap.php');
