@@ -24,7 +24,7 @@
     <meta name="twitter:title" content="Branchen-Leads für Ihren Vertrieb in 2 Minuten | LeadFinderPro">
     <meta name="twitter:description" content="Finden Sie qualifizierte Leads aus OpenStreetMap — nach Branche und Ort. Für Marketing-Agenturen und Vertriebsteams in DACH.">
 
-    <!-- Schema.org -->
+    <!-- Schema.org SoftwareApplication -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -33,13 +33,29 @@
         "applicationCategory": "BusinessApplication",
         "operatingSystem": "Web",
         "description": "Lead-Generierung für Marketing-Agenturen und Vertriebsteams. Finden Sie Branchen-Leads aus OpenStreetMap nach Ort und Branche. DACH-Fokus.",
-        "offers": {
-            "@type": "AggregateOffer",
-            "lowPrice": "0",
-            "highPrice": "99",
-            "priceCurrency": "EUR",
-            "offerCount": "3"
-        },
+        "offers": [
+            {
+                "@type": "Offer",
+                "name": "Free Plan",
+                "price": "0",
+                "priceCurrency": "EUR",
+                "description": "3 Suchläufe pro Monat, bis 50 Ergebnisse, CSV-Export"
+            },
+            {
+                "@type": "Offer",
+                "name": "Pro Plan",
+                "price": "49",
+                "priceCurrency": "EUR",
+                "description": "Unbegrenzte Suchen, bis 500 Ergebnisse, CSV + API Export"
+            },
+            {
+                "@type": "Offer",
+                "name": "Business Plan",
+                "price": "99",
+                "priceCurrency": "EUR",
+                "description": "Unbegrenzte Ergebnisse, White-Label Export, API-Zugang, Prioritäts-Support"
+            }
+        ],
         "creator": {
             "@type": "Organization",
             "name": "CreativeCodingSolutions",
@@ -118,7 +134,7 @@
                 Wir verwenden keine Cookies und tracken Sie nicht. Ihre Suchanfragen werden nicht gespeichert.
                 <a href="/datenschutz" class="underline hover:no-underline text-indigo-400">Datenschutzerklärung</a>
             </p>
-            <button onclick="document.getElementById('cookie-banner').classList.remove('show')"
+            <button id="cookie-accept-btn"
                     class="bg-indigo-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-indigo-700 transition whitespace-nowrap">
                 Verstanden
             </button>
@@ -417,10 +433,24 @@
     </footer>
 
     <script>
-        // Show cookie banner after 1s
-        setTimeout(function() {
-            document.getElementById('cookie-banner').classList.add('show');
-        }, 1000);
+        // Cookie consent with localStorage persistence
+        (function() {
+            var banner = document.getElementById('cookie-banner');
+            var acceptBtn = document.getElementById('cookie-accept-btn');
+            if (!banner || !acceptBtn) return;
+
+            // Only show if user hasn't already accepted
+            if (!localStorage.getItem('cookie_consent')) {
+                setTimeout(function() {
+                    banner.classList.add('show');
+                }, 1000);
+            }
+
+            acceptBtn.addEventListener('click', function() {
+                localStorage.setItem('cookie_consent', 'accepted');
+                banner.classList.remove('show');
+            });
+        })();
     </script>
 </body>
 </html>
