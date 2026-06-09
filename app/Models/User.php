@@ -17,8 +17,10 @@ class User extends Authenticatable implements MustVerifyEmail
         'password',
         'is_admin',
         'stripe_id',
+        'stripe_status',
         'plan',
-        'plan_expires_at',
+        'trial_ends_at',
+        'plan_ends_at',
         'reports_limit',
     ];
 
@@ -31,7 +33,8 @@ class User extends Authenticatable implements MustVerifyEmail
         'password' => 'hashed',
         'is_admin' => 'boolean',
         'email_verified_at' => 'datetime',
-        'plan_expires_at' => 'datetime',
+        'trial_ends_at' => 'datetime',
+        'plan_ends_at' => 'datetime',
     ];
 
     public function leads()
@@ -44,15 +47,37 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->hasMany(Search::class);
     }
 
+    public function subscriptions()
+    {
+        return $this->hasMany(Subscription::class);
+    }
+
+    public function activeSubscription(): ?Subscription
+    {
+        return $this->subscriptions()
+            ->whereIn('stripe_status', ['active', 'trialing'])
+            ->where(function ($q) {
+                $q->whereNull('ends_at')->orWhere('ends_at', '>', now());
+            })
+            ->latest('current_period_end')
+            ->first();
+    }
+
     public function isPro(): bool
     {
-        return in_array($this->plan, ['pro', 'business']) && 
-               ($this->plan_expires_at === null || $this->plan_expires_at->isFuture());
+        return in_array($this->plan, ['pro', 'business', 'agency']) &&
+               ($this->plan_ends_at === null || $this->plan_ends_at->isFuture());
     }
 
     public function isBusiness(): bool
     {
-        return $this->plan === 'business' && 
-               ($this->plan_expires_at === null || $this->plan_expires_at->isFuture());
+        return in_array($this->plan, ['business', 'agency']) &&
+               ($this->plan_ends_at === null || $this->plan_ends_at->isFuture());
+    }
+
+    public function isAgency(): bool
+    {
+        return $this->plan === 'agency' &&
+               ($this->plan_ends_at === null || $this->plan_ends_at->isFuture());
     }
 }

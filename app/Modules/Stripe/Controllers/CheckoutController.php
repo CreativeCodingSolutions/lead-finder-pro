@@ -28,7 +28,7 @@ class CheckoutController extends Controller
     public function checkout(Request $request)
     {
         $request->validate([
-            'plan' => 'required|in:pro,business',
+            'plan' => 'required|in:pro,business,agency',
         ]);
 
         $user = Auth::user();
