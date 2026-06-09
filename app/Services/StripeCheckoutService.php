@@ -19,15 +19,31 @@ class StripeCheckoutService
     }
 
     /**
+     * Get the price ID for a given plan.
+     */
+    public function getPriceId(string $plan): ?string
+    {
+        $prices = [
+            'pro' => config('stripe.prices.pro'),
+            'business' => config('stripe.prices.business'),
+            'agency' => config('stripe.prices.agency'),
+        ];
+
+        return $prices[$plan] ?? null;
+    }
+
+    /**
      * Create a Stripe Checkout Session for a subscription.
      */
     public function createCheckoutSession(User $user, string $plan): CheckoutSession
     {
-        $priceId = $plan === 'business'
-            ? config('stripe.price_business')
-            : config('stripe.price_pro');
+        $priceId = $this->getPriceId($plan);
 
-        return $this->stripe->checkout->sessions->create([
+        if (!$priceId) {
+            throw new \InvalidArgumentException("No price configured for plan: {$plan}");
+        }
+
+        $params = [
             'customer_email' => $user->email,
             'line_items' => [[
                 'price' => $priceId,
@@ -39,28 +55,84 @@ class StripeCheckoutService
             'metadata' => [
                 'user_id' => $user->id,
                 'plan' => $plan,
+                'product' => config('app.name'),
             ],
+            'subscription_data' => [
+                'metadata' => [
+                    'user_id' => $user->id,
+                    'plan' => $plan,
+                ],
+            ],
+        ];
+
+        // If user already has a Stripe customer ID, use it
+        if ($user->stripe_id) {
+            $params['customer'] = $user->stripe_id;
+            unset($params['customer_email']);
+        }
+
+        return $this->stripe->checkout->sessions->create($params);
+    }
+
+    /**
+     * Retrieve and verify a checkout session.
+     */
+    public function retrieveSession(string $sessionId, array $expand = []): CheckoutSession
+    {
+        return $this->stripe->checkout->sessions->retrieve($sessionId, [
+            'expand' => array_merge(['subscription'], $expand),
         ]);
     }
 
     /**
-     * Handle successful checkout.
+     * Handle successful checkout — create/update subscription record.
      */
     public function handleSuccess(string $sessionId): void
     {
-        $session = $this->stripe->checkout->sessions->retrieve($sessionId, [
-            'expand' => ['subscription'],
-        ]);
+        $session = $this->retrieveSession($sessionId, ['subscription']);
 
         $user = User::findOrFail($session->metadata->user_id);
         $subscription = $session->subscription;
 
+        if (!$subscription) {
+            Log::warning("No subscription found in session {$sessionId}");
+            return;
+        }
+
+        // Update user
         $user->update([
-            'stripe_id' => $subscription->customer ?? null,
+            'stripe_id' => $subscription->customer,
+            'stripe_status' => $subscription->status,
             'plan' => $session->metadata->plan ?? 'pro',
-            'plan_expires_at' => now()->addMonth(),
-            'reports_limit' => ($session->metadata->plan ?? null) === 'business' ? 999999 : 50,
+            'plan_ends_at' => $subscription->current_period_end
+                ? \Carbon\Carbon::createFromTimestamp($subscription->current_period_end)
+                : null,
         ]);
+
+        // Create or update subscription record
+        $user->subscriptions()->updateOrCreate(
+            ['stripe_id' => $subscription->id],
+            [
+                'stripe_price' => $subscription->items->data[0]->price->id ?? null,
+                'plan' => $session->metadata->plan ?? 'pro',
+                'stripe_status' => $subscription->status,
+                'quantity' => $subscription->items->data[0]->quantity ?? 1,
+                'trial_ends_at' => $subscription->trial_end
+                    ? \Carbon\Carbon::createFromTimestamp($subscription->trial_end)
+                    : null,
+                'current_period_start' => $subscription->current_period_start
+                    ? \Carbon\Carbon::createFromTimestamp($subscription->current_period_start)
+                    : null,
+                'current_period_end' => $subscription->current_period_end
+                    ? \Carbon\Carbon::createFromTimestamp($subscription->current_period_end)
+                    : null,
+                'ends_at' => $subscription->ended_at
+                    ? \Carbon\Carbon::createFromTimestamp($subscription->ended_at)
+                    : null,
+            ]
+        );
+
+        Log::info("Subscription activated for user {$user->id}: {$session->metadata->plan}");
     }
 
     /**
@@ -72,6 +144,58 @@ class StripeCheckoutService
             $payload,
             $sigHeader,
             config('stripe.webhook_secret')
+        );
+    }
+
+    /**
+     * Handle subscription updated/created webhook.
+     */
+    public function handleSubscriptionUpdated(\Stripe\Subscription $subscription): void
+    {
+        $user = User::where('stripe_id', $subscription->customer)->first();
+        if (!$user) {
+            Log::warning("User not found for Stripe customer: {$subscription->customer}");
+            return;
+        }
+
+        $plan = $subscription->metadata->plan ?? 'pro';
+
+        if (in_array($subscription->status, ['active', 'trialing', 'past_due'])) {
+            $user->update([
+                'plan' => $plan,
+                'stripe_status' => $subscription->status,
+                'plan_ends_at' => $subscription->current_period_end
+                    ? \Carbon\Carbon::createFromTimestamp($subscription->current_period_end)
+                    : null,
+            ]);
+        } elseif (in_array($subscription->status, ['canceled', 'unpaid'])) {
+            $user->update([
+                'plan' => 'free',
+                'stripe_status' => $subscription->status,
+                'plan_ends_at' => null,
+            ]);
+        }
+
+        // Update subscription record
+        $user->subscriptions()->updateOrCreate(
+            ['stripe_id' => $subscription->id],
+            [
+                'stripe_price' => $subscription->items->data[0]->price->id ?? null,
+                'plan' => $plan,
+                'stripe_status' => $subscription->status,
+                'trial_ends_at' => $subscription->trial_end
+                    ? \Carbon\Carbon::createFromTimestamp($subscription->trial_end)
+                    : null,
+                'current_period_start' => $subscription->current_period_start
+                    ? \Carbon\Carbon::createFromTimestamp($subscription->current_period_start)
+                    : null,
+                'current_period_end' => $subscription->current_period_end
+                    ? \Carbon\Carbon::createFromTimestamp($subscription->current_period_end)
+                    : null,
+                'ends_at' => $subscription->ended_at
+                    ? \Carbon\Carbon::createFromTimestamp($subscription->ended_at)
+                    : null,
+            ]
         );
     }
 
@@ -95,33 +219,28 @@ class StripeCheckoutService
 
         $user->update([
             'plan' => 'free',
-            'plan_expires_at' => null,
-            'reports_limit' => 3,
+            'stripe_status' => 'canceled',
+            'plan_ends_at' => null,
         ]);
     }
 
     /**
-     * Handle subscription updated webhook.
+     * Create a billing portal session for managing subscription.
      */
-    public function handleSubscriptionUpdated(\Stripe\Subscription $subscription): void
+    public function createBillingPortalSession(User $user, string $returnUrl): \Stripe\BillingPortal\Session
     {
-        $user = User::where('stripe_id', $subscription->customer)->first();
-        if (!$user) {
-            return;
+        if (!$user->stripe_id) {
+            // Create customer first
+            $customer = $this->stripe->customers->create([
+                'email' => $user->email,
+                'name' => $user->name,
+            ]);
+            $user->update(['stripe_id' => $customer->id]);
         }
 
-        if ($subscription->status === 'active') {
-            $plan = $subscription->metadata->plan ?? 'pro';
-            $user->update([
-                'plan' => $plan,
-                'plan_expires_at' => now()->addMonth(),
-                'reports_limit' => $plan === 'business' ? 999999 : 50,
-            ]);
-        } elseif (in_array($subscription->status, ['canceled', 'unpaid', 'past_due'])) {
-            $user->update([
-                'plan' => 'free',
-                'reports_limit' => 3,
-            ]);
-        }
+        return $this->stripe->billingPortal->sessions->create([
+            'customer' => $user->stripe_id,
+            'return_url' => $returnUrl,
+        ]);
     }
 }

@@ -19,7 +19,7 @@ class StripeController extends Controller
     public function checkout(Request $request)
     {
         $request->validate([
-            'plan' => 'required|in:pro,business',
+            'plan' => 'required|in:pro,business,agency',
         ]);
 
         $user = Auth::user();
@@ -97,6 +97,16 @@ class StripeController extends Controller
                 $this->stripeService->handleSubscriptionUpdated($subscription);
                 break;
 
+            case 'invoice.paid':
+                $invoice = $event->data->object;
+                Log::info("Invoice paid: {$invoice->id}");
+                break;
+
+            case 'invoice.payment_failed':
+                $invoice = $event->data->object;
+                Log::warning("Invoice payment failed: {$invoice->id}");
+                break;
+
             default:
                 Log::info('Unhandled Stripe event type: ' . $event->type);
         }
@@ -105,18 +115,18 @@ class StripeController extends Controller
     }
 
     /**
-     * Cancel subscription.
+     * Cancel subscription (redirect to billing portal).
      */
     public function subscriptionCancel(Request $request)
     {
         $user = Auth::user();
 
         try {
-            $this->stripeService->cancelSubscription($user);
-            return redirect()->route('dashboard')->with('success', 'Subscription cancelled. You can continue using the free plan.');
+            $portal = $this->stripeService->createBillingPortalSession($user, route('dashboard'));
+            return redirect($portal->url);
         } catch (\Exception $e) {
-            Log::error('Stripe cancel error: ' . $e->getMessage());
-            return back()->with('error', 'Could not cancel subscription. Please contact support.');
+            Log::error('Stripe portal error: ' . $e->getMessage());
+            return back()->with('error', 'Could not open billing portal. Please contact support.');
         }
     }
 }
