@@ -6,20 +6,35 @@ services:
       context: .
       dockerfile: Dockerfile
     restart: unless-stopped
-    ports:
-      - "10002:10000"
     environment:
       - APP_ENV=production
       - APP_DEBUG=false
+      - APP_KEY=base64:fX1c6IUH0fOM/6kat+nJP2ePlBZM+TocCNv4e+dJJRo=
       - APP_URL=https://leadfinderpro.creativecoding.cloud
       - TRUSTED_PROXIES=*
       - DB_CONNECTION=sqlite
       - DB_DATABASE=/var/www/database/database.sqlite
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.leadfinderpro.rule=Host(`leadfinderpro.creativecoding.cloud`)"
+      - "traefik.http.routers.leadfinderpro.entrypoints=websecure"
+      - "traefik.http.routers.leadfinderpro.tls.certresolver=letsencrypt"
+      - "traefik.http.services.leadfinderpro.loadbalancer.server.port=10000"
     volumes:
       - lfp-storage:/var/www/storage
       - lfp-database:/var/www/database
     working_dir: /var/www
+    healthcheck:
+      test: ["CMD", "php", "artisan", "route:list"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
 
 volumes:
   lfp-storage:
   lfp-database:
+
+networks:
+  default:
+    name: traefik
+    external: true
