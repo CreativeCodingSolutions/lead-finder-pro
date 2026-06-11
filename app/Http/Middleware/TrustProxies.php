@@ -10,9 +10,9 @@ class TrustProxies extends Middleware
     /**
      * The trusted proxies for this application.
      *
-     * Use specific IP addresses or CIDR ranges instead of wildcard '*'
-     * to prevent IP spoofing attacks. Configure via TRUSTED_PROXIES env var
-     * (comma-separated), e.g. "10.0.0.0/8,172.16.0.0/12,192.168.0.0/16"
+     * Supports:
+     *   - "*"  (trust all proxies — use only behind controlled reverse proxy like Traefik)
+     *   - Comma-separated IPs/CIDRs, e.g. "10.0.0.0/8,172.16.0.0/12"
      *
      * @var array|string|null
      */
@@ -27,7 +27,11 @@ class TrustProxies extends Middleware
     public function __construct()
     {
         $configured = env('TRUSTED_PROXIES', '');
-        if (!empty($configured)) {
+        if ($configured === '*') {
+            // Trust all proxies (safe when behind controlled reverse proxy like Traefik)
+            $this->proxies = '*';
+        } elseif (!empty($configured)) {
+            // Parse comma-separated list of IPs/CIDRs
             $this->proxies = array_map('trim', explode(',', $configured));
         } else {
             // No proxies trusted by default — safe fallback
