@@ -61,3 +61,13 @@
 #30 /opt/data/founder/apps/lead-finder-pro/artisan(16): Illuminate\\Foundation\\Application->handleCommand()
 #31 {main}
 "} 
+[2026-06-19 10:43:26] production.ERROR: Uncaught Error: Call to undefined method Illuminate\Foundation\Http\Kernel::getMiddlewareClasses() in Command line code:6
+Stack trace:
+#0 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Call to undefined method Illuminate\\Foundation\\Http\\Kernel::getMiddlewareClasses() in Command line code:6
+Stack trace:
+#0 {main}
+  thrown at Command line code:6)
+[stacktrace]
+#0 {main}
+"} 

@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('title', 'Registrieren - Lead Finder Pro')
 
+@section('content')
 <div class="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-50 to-blue-50 px-4">
     <div class="max-w-md w-full">
         <div class="text-center mb-8">
@@ -50,3 +51,4 @@
         </div>
     </div>
 </div>
+@endsection
