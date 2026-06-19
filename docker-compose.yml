@@ -20,6 +20,11 @@ services:
       - "traefik.http.routers.leadfinderpro.entrypoints=websecure"
       - "traefik.http.routers.leadfinderpro.tls.certresolver=letsencrypt"
       - "traefik.http.services.leadfinderpro.loadbalancer.server.port=10000"
+      # HTTP → HTTPS Redirect (catch-all router on web entrypoint)
+      - "traefik.http.routers.leadfinderpro-http.rule=Host(`leadfinderpro.creativecoding.cloud`)"
+      - "traefik.http.routers.leadfinderpro-http.entrypoints=web"
+      - "traefik.http.routers.leadfinderpro-http.middlewares=redirect-to-https"
+      - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
     volumes:
       - lfp-storage:/var/www/storage
       - lfp-database:/var/www/database
