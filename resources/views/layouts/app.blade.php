@@ -113,6 +113,54 @@
         @yield('content')
     </main>
 
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-consent" class="fixed bottom-0 left-0 right-0 z-[100] hidden">
+        <div class="max-w-5xl mx-auto px-4 pb-4">
+            <div class="bg-white border border-gray-200 rounded-lg shadow-lg p-4 sm:p-5 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                <div class="flex-1">
+                    <p class="text-sm text-gray-700 leading-relaxed">
+                        <strong class="text-gray-900">Cookies & Datenschutz</strong><br>
+                        Wir verwenden nur technisch notwendige Cookies für den Betrieb der Website. Kein Tracking, keine Werbung.
+                        Details finden Sie in unserer <a href="/datenschutz" class="text-indigo-600 underline hover:text-indigo-800">Datenschutzerklärung</a>.
+                    </p>
+                </div>
+                <div class="flex items-center gap-3 shrink-0">
+                    <button id="cookie-accept" class="bg-indigo-600 text-white text-sm font-medium px-5 py-2 rounded hover:bg-indigo-700 transition">
+                        Akzeptieren
+                    </button>
+                    <button id="cookie-decline" class="bg-gray-100 text-gray-700 text-sm font-medium px-5 py-2 rounded hover:bg-gray-200 transition">
+                        Nur notwendige
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    (function() {
+        var STORAGE_KEY = 'leadfinder_cookie_consent';
+        var banner = document.getElementById('cookie-consent');
+        var existing = localStorage.getItem(STORAGE_KEY);
+        if (!existing && banner) {
+            banner.classList.remove('hidden');
+        }
+        var acceptBtn = document.getElementById('cookie-accept');
+        if (acceptBtn) {
+            acceptBtn.addEventListener('click', function() {
+                localStorage.setItem(STORAGE_KEY, JSON.stringify({ consent: true, essential: true, timestamp: new Date().toISOString() }));
+                if (banner) banner.classList.add('hidden');
+            });
+        }
+        var declineBtn = document.getElementById('cookie-decline');
+        if (declineBtn) {
+            declineBtn.addEventListener('click', function() {
+                localStorage.setItem(STORAGE_KEY, JSON.stringify({ consent: false, essential: true, timestamp: new Date().toISOString() }));
+                if (banner) banner.classList.add('hidden');
+            });
+        }
+    })();
+    </script>
+
     @auth
     <!-- Mobile bottom nav -->
     <nav class="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 z-50">

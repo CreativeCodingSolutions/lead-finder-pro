@@ -16,26 +16,11 @@ class TrustProxies extends Middleware
      *
      * @var array|string|null
      */
-    protected $proxies;
+    protected $proxies = '*';
 
     protected $headers = Request::HEADER_X_FORWARDED_FOR
         | Request::HEADER_X_FORWARDED_HOST
         | Request::HEADER_X_FORWARDED_PORT
         | Request::HEADER_X_FORWARDED_PROTO
         | Request::HEADER_X_FORWARDED_AWS_ELB;
-
-    public function __construct()
-    {
-        $configured = env('TRUSTED_PROXIES', '');
-        if ($configured === '*') {
-            // Trust all proxies (safe when behind controlled reverse proxy like Traefik)
-            $this->proxies = '*';
-        } elseif (!empty($configured)) {
-            // Parse comma-separated list of IPs/CIDRs
-            $this->proxies = array_map('trim', explode(',', $configured));
-        } else {
-            // No proxies trusted by default — safe fallback
-            $this->proxies = [];
-        }
-    }
 }
