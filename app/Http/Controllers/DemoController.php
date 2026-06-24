@@ -129,13 +129,13 @@ class DemoController extends Controller
                 'city' => $city,
                 'postal_code' => $postalCode,
                 'country' => $country,
-                'phone' => $phonePrefix . ' ' . rand(100, 999) . ' ' . rand(100000, 999999),
-                'website' => rand(0, 1) ? 'https://www.' . strtolower(str_replace([' ', 'ä', 'ö', 'ü', 'ß'], ['-', 'ae', 'oe', 'ue', 'ss'], $name)) . $tld : null,
-                'email' => rand(0, 1) ? 'info@' . strtolower(str_replace([' ', 'ä', 'ö', 'ü', 'ß'], ['-', 'ae', 'oe', 'ue', 'ss'], $name)) . $tld : null,
+                'phone' => null,
+                'website' => null,
+                'email' => null,
                 'industry' => $industry->name,
-                'has_website' => rand(0, 1),
-                'has_email' => rand(0, 1),
-                'has_phone' => true,
+                'has_website' => false,
+                'has_email' => false,
+                'has_phone' => false,
             ];
         }
 

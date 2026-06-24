@@ -296,7 +296,7 @@
     <section class="bg-gray-50 border-t border-b border-gray-200 py-16">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-2xl font-bold text-gray-900 mb-3">Beispiel: Suche nach "Zahnarzt" in München</h2>
-            <p class="text-gray-600 mb-8">In einer Testsuche fanden wir 47 Zahnarztpraxen mit Website, davon 31 mit E-Mail-Adresse.</p>
+            <p class="text-gray-600 mb-8">In einer typischen Suche finden wir mehrere Zahnarztpraxen mit Website, ein Teil davon mit E-Mail-Adresse.</p>
 
             <div class="bg-white border border-gray-200 rounded-lg overflow-hidden">
                 <table class="w-full text-sm">
@@ -310,22 +310,22 @@
                     </thead>
                     <tbody class="divide-y divide-gray-100">
                         <tr>
-                            <td class="px-4 py-3">Praxis Dr. Müller</td>
-                            <td class="px-4 py-3">089 / 123 456</td>
-                            <td class="px-4 py-3">mueller-zahn.de</td>
-                            <td class="px-4 py-3">info@mueller-zahn.de</td>
+                            <td class="px-4 py-3">Musterpraxis A</td>
+                            <td class="px-4 py-3 text-gray-400">—</td>
+                            <td class="px-4 py-3 text-gray-400">—</td>
+                            <td class="px-4 py-3 text-gray-400">—</td>
                         </tr>
                         <tr>
-                            <td class="px-4 py-3">Zahnzentrum Süd</td>
-                            <td class="px-4 py-3">089 / 987 654</td>
-                            <td class="px-4 py-3">zahnzentrum-sued.de</td>
-                            <td class="px-4 py-3">—</td>
+                            <td class="px-4 py-3">Beispielpraxis B</td>
+                            <td class="px-4 py-3 text-gray-400">—</td>
+                            <td class="px-4 py-3 text-gray-400">—</td>
+                            <td class="px-4 py-3 text-gray-400">—</td>
                         </tr>
                         <tr>
-                            <td class="px-4 py-3">Dr. Schmidt & Kollegen</td>
-                            <td class="px-4 py-3">089 / 555 123</td>
-                            <td class="px-4 py-3">schmidt-zahn.de</td>
-                            <td class="px-4 py-3">praxis@schmidt-zahn.de</td>
+                            <td class="px-4 py-3">Zahnarzt Beispiel C</td>
+                            <td class="px-4 py-3 text-gray-400">—</td>
+                            <td class="px-4 py-3 text-gray-400">—</td>
+                            <td class="px-4 py-3 text-gray-400">—</td>
                         </tr>
                         <tr>
                             <td class="px-4 py-3 text-gray-400" colspan="4">... und 44 weitere</td>
@@ -333,7 +333,7 @@
                     </tbody>
                 </table>
             </div>
-            <p class="text-xs text-gray-400 mt-3">Hinweis: Die Daten stammen aus OpenStreetMap. Vollständigkeit und Richtigkeit können wir nicht garantieren — prüfen Sie wichtige Kontakte vor dem ersten Anruf.</p>
+            <p class="text-xs text-gray-400 mt-3">Hinweis: Die oben genannten Einträge sind Platzhalter. Echte Suchergebnisse werden nach Eingabe einer Suchanfrage angezeigt.</p>
         </div>
     </section>
 
