@@ -40,6 +40,18 @@
                         class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition"
                         placeholder="••••••••">
                 </div>
+                <div class="space-y-2">
+                    <label class="flex items-start gap-2 text-sm text-gray-600 cursor-pointer">
+                        <input type="checkbox" name="agb_consent" required
+                            class="mt-0.5 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                        <span>Ich habe die <a href="/agb" class="text-primary hover:underline">AGB</a> gelesen und stimme ihnen zu.</span>
+                    </label>
+                    <label class="flex items-start gap-2 text-sm text-gray-600 cursor-pointer">
+                        <input type="checkbox" name="privacy_consent" required
+                            class="mt-0.5 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                        <span>Ich habe die <a href="/datenschutz" class="text-primary hover:underline">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu.</span>
+                    </label>
+                </div>
                 <button type="submit" class="w-full bg-primary text-white py-2.5 rounded-lg font-medium hover:bg-secondary transition">
                     Registrieren
                 </button>

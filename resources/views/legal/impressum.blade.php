@@ -9,16 +9,15 @@
     <div class="prose prose-gray max-w-none">
         <p class="text-lg text-gray-600 mb-6">Angaben gemäß § 5 TMG</p>
         <p class="mb-4">
-            CreativeCodingSolutions<br>
+            CreativeCoding Solutions eG<br>
             Karsten Brauner<br>
-            Musterstraße 123<br>
             1010 Wien<br>
-            Österreich
+            Österreich<br>
+            Firmenbuch: 1234567890
         </p>
         <h2 class="text-xl font-semibold mt-8 mb-4">Kontakt</h2>
         <p class="mb-4">
-            Telefon: +43 1 234 5678<br>
-            E-Mail: info@creativecoding.cloud
+            E-Mail: office@creativecoding.cloud
         </p>
         <h2 class="text-xl font-semibold mt-8 mb-4">EU-Streitschlichtung</h2>
         <p class="mb-4">
