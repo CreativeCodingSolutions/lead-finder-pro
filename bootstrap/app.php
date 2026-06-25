@@ -12,7 +12,7 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
-        $middleware->validateCsrfTokens(except: ['webhook/stripe']);
+        $middleware->validateCsrfTokens(except: ['webhook/stripe', '/demo/search']);
         $middleware->replace(
             \Illuminate\Http\Middleware\TrustProxies::class,
             \App\Http\Middleware\TrustProxies::class
