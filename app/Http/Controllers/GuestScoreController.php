@@ -118,7 +118,10 @@ class GuestScoreController extends Controller
         $guestScore = GuestScore::where('uuid', $uuid)->firstOrFail();
 
         // Save lead with lfp_landing source
+        // Guest leads have no user account — use a dummy user_id (0) since
+        // SQLite FK enforcement is OFF by default and user_id is NOT NULL
         $lead = Lead::create([
+            'user_id' => 0,
             'guest_score_id' => $guestScore->id,
             'email' => $request->input('email'),
             'name' => $request->input('name'),
