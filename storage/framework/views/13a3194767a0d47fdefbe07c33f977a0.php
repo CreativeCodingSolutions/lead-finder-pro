@@ -9,7 +9,7 @@
         <h2 class="text-xl font-semibold mt-8 mb-4">1. Verantwortlicher</h2>
         <p>
             Karsten Brauner, CreativeCoding Solutions eG, 1010 Wien, Österreich<br>
-            E-Mail: office@creativecoding.cloud
+            E-Mail: info@creativecoding.cloud
         </p>
 
         <h2 class="text-xl font-semibold mt-8 mb-4">2. Erhebung und Speicherung personenbezogener Daten</h2>
@@ -49,7 +49,7 @@
         <h2 class="text-xl font-semibold mt-8 mb-4">5. Ihre Rechte</h2>
         <p>
             Auskunft, Berichtigung, Löschung, Einschränkung, Übertragbarkeit, Widerspruch.<br>
-            Kontakt: office@creativecoding.cloud
+            Kontakt: info@creativecoding.cloud
         </p>
 
         <h2 class="text-xl font-semibold mt-8 mb-4">6. Hosting</h2>
