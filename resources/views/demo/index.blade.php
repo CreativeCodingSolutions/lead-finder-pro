@@ -20,6 +20,7 @@
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="LeadFinderPro — Kostenlose Lead-Demo">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="{{ url('/og-image.png') }}">
     <!-- Schema.org BreadcrumbList -->
     <script type="application/ld+json">
     {

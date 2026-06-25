@@ -21,6 +21,7 @@
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="LeadFinderPro — Branchen-Leads für Ihren Vertrieb in 2 Minuten">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="{{ url('/og-image.png') }}">
     <meta name="twitter:title" content="Branchen-Leads für Ihren Vertrieb in 2 Minuten | LeadFinderPro">
     <meta name="twitter:description" content="Finden Sie qualifizierte Leads aus OpenStreetMap — nach Branche und Ort. Für Marketing-Agenturen und Vertriebsteams in DACH.">
 

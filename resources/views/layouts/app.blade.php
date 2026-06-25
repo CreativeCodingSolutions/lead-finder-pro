@@ -22,6 +22,7 @@
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="LeadFinderPro — Branchen-Leads für Ihren Vertrieb in 2 Minuten">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="{{ url('/og-image.png') }}">
     @yield('og_tags')
 
     <!-- Schema.org Organization -->
