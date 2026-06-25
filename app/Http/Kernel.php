@@ -3,6 +3,7 @@
 namespace App\Http;
 
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
+use Illuminate\Foundation\Http\Middleware\ValidateCsrfToken;
 
 class Kernel extends HttpKernel
 {
@@ -34,4 +35,12 @@ class Kernel extends HttpKernel
         'guest' => \Illuminate\Auth\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
     ];
+
+    protected function bootstrappers()
+    {
+        // Exclude demo search from CSRF (public demo endpoint)
+        ValidateCsrfToken::except('/demo/search');
+
+        return parent::bootstrappers();
+    }
 }

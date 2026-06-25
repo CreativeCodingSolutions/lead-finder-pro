@@ -234,7 +234,7 @@
     <!-- Funktionsweise -->
     <section id="funktionsweise" class="bg-gray-50 border-t border-b border-gray-200 py-16">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-2xl font-bold text-gray-900 mb-8">In 3 Schritten zu Ihren Leads</h2>
+            <h2 class="text-2xl font-bold text-gray-900 mb-8">In drei Schritten zu Ihren Leads</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
                     <div class="w-10 h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold mb-4">1</div>
