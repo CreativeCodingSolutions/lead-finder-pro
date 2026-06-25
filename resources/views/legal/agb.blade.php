@@ -1,7 +1,10 @@
 @extends('layouts.app')
 
 @section('title', 'AGB | LeadFinder Pro')
-@section('meta_description', 'Allgemeine Geschäftsbedingungen von LeadFinder Pro.')
+@section('meta_description', 'Allgemeine Geschäftsbedingungen von LeadFinder Pro — Nutzungsbedingungen für die Lead-Generierung.')
+@section('meta_keywords', 'AGB, Nutzungsbedingungen, LeadFinder Pro, Lead Generation')
+@section('canonical', 'https://leadfinderpro.creativecoding.cloud/agb')
+@section('meta_robots', 'noindex, follow')
 
 @section('content')
 <div class="max-w-4xl mx-auto px-4 py-16">

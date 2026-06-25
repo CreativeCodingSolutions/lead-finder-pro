@@ -68,6 +68,50 @@
         ]
     }
     </script>
+    <!-- Schema.org LocalBusiness -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "LeadFinderPro",
+        "description": "Lead-Generierung für Marketing-Agenturen und Vertriebsteams in DACH. Branchen-Leads aus OpenStreetMap.",
+        "url": "https://leadfinderpro.creativecoding.cloud",
+        "logo": "https://leadfinderpro.creativecoding.cloud/og-image.png",
+        "image": "https://leadfinderpro.creativecoding.cloud/og-image.png",
+        "priceRange": "€0 - €99",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "1010 Wien",
+            "addressLocality": "Wien",
+            "addressRegion": "Wien",
+            "postalCode": "1010",
+            "addressCountry": "AT"
+        },
+        "areaServed": [
+            {"@type": "Country", "name": "Deutschland"},
+            {"@type": "Country", "name": "Österreich"},
+            {"@type": "Country", "name": "Schweiz"}
+        ],
+        "sameAs": [
+            "https://github.com/CreativeCodingSolutions"
+        ]
+    }
+    </script>
+    <!-- Schema.org BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Startseite",
+                "item": "https://leadfinderpro.creativecoding.cloud/"
+            }
+        ]
+    }
+    </script>
     <!-- Schema.org FAQ -->
     <script type="application/ld+json">
     {

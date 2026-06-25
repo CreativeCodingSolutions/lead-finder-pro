@@ -6,7 +6,41 @@
     <title>LeadFinderPro — Kostenlose Lead-Demo</title>
     <meta name="description" content="Testen Sie LeadFinderPro kostenlos. Branche + Ort eingeben und sofort Beispiel-Leads sehen. Keine Anmeldung nötig.">
     <meta name="robots" content="index, follow">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="keywords" content="Lead Demo, LeadFinderPro, OpenStreetMap Leads, Branchenbuch, DACH">
+    <link rel="canonical" href="https://leadfinderpro.creativecoding.cloud/demo">
+    <!-- Open Graph -->
+    <meta property="og:title" content="LeadFinderPro — Kostenlose Lead-Demo">
+    <meta property="og:description" content="Testen Sie LeadFinderPro kostenlos. Branche + Ort eingeben und sofort Beispiel-Leads sehen.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://leadfinderpro.creativecoding.cloud/demo">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="LeadFinderPro">
+    <meta property="og:image" content="https://leadfinderpro.creativecoding.cloud/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="LeadFinderPro — Kostenlose Lead-Demo">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Schema.org BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Startseite",
+                "item": "https://leadfinderpro.creativecoding.cloud/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Demo",
+                "item": "https://leadfinderpro.creativecoding.cloud/demo"
+            }
+        ]
+    }
+    </script>
 </head>
 <body class="bg-white text-gray-800 font-sans">
 

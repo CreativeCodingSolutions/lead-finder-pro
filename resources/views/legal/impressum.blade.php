@@ -1,7 +1,10 @@
 @extends('layouts.app')
 
 @section('title', 'Impressum | LeadFinder Pro')
-@section('meta_description', 'Impressum von LeadFinder Pro — B2B Lead Generation aus OpenStreetMap.')
+@section('meta_description', 'Impressum von LeadFinder Pro — B2B Lead Generation aus OpenStreetMap. CreativeCoding Solutions eG, Wien.')
+@section('meta_keywords', 'Impressum, LeadFinder Pro, CreativeCoding Solutions, Kontakt')
+@section('canonical', 'https://leadfinderpro.creativecoding.cloud/impressum')
+@section('meta_robots', 'noindex, follow')
 
 @section('content')
 <div class="max-w-4xl mx-auto px-4 py-16">

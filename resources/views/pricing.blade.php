@@ -2,11 +2,37 @@
 
 @section('title', 'Preise — LeadFinderPro | Kostenlos, Pro €49, Business €99')
 @section('meta_description', 'Transparente Preise für LeadFinderPro. Kostenlos starten mit 3 Suchläufe/Monat. Pro ab €49/Monat, Business ab €99/Monat. Keine versteckten Kosten, monatlich kündbar.')
+@section('meta_keywords', 'Lead Generation preise, B2B Leads Abo, LeadFinderPro Pro, LeadFinderPro Business, DACH')
+@section('canonical', 'https://leadfinderpro.creativecoding.cloud/pricing')
 
 @section('og_tags')
 <meta property="og:title" content="Preise — LeadFinderPro | Kostenlos, Pro €49, Business €99">
 <meta property="og:description" content="Transparente Preise für LeadFinderPro. Kostenlos starten, Pro ab €49/Monat. Keine versteckten Kosten.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://leadfinderpro.creativecoding.cloud/pricing">
+@endsection
+
+@section('breadcrumbs')
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Startseite",
+            "item": "https://leadfinderpro.creativecoding.cloud/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Preise",
+            "item": "https://leadfinderpro.creativecoding.cloud/pricing"
+        }
+    ]
+}
+</script>
 @endsection
 
 @section('schema')
@@ -16,27 +42,35 @@
     "@type": "Product",
     "name": "LeadFinderPro",
     "description": "Lead-Generierung für Marketing-Agenturen und Vertriebsteams. Finden Sie Branchen-Leads aus OpenStreetMap.",
+    "image": "https://leadfinderpro.creativecoding.cloud/og-image.png",
+    "brand": {
+        "@type": "Brand",
+        "name": "LeadFinderPro"
+    },
     "offers": [
         {
             "@type": "Offer",
             "name": "Free",
             "price": "0",
             "priceCurrency": "EUR",
-            "description": "3 Suchläufe pro Monat, bis 50 Ergebnisse, CSV-Export"
+            "description": "3 Suchläufe pro Monat, bis 50 Ergebnisse, CSV-Export",
+            "availability": "https://schema.org/InStock"
         },
         {
             "@type": "Offer",
             "name": "Pro",
             "price": "49",
             "priceCurrency": "EUR",
-            "description": "Unbegrenzte Suchen, bis 500 Ergebnisse, CSV + API Export"
+            "description": "Unbegrenzte Suchen, bis 500 Ergebnisse, CSV + API Export",
+            "availability": "https://schema.org/InStock"
         },
         {
             "@type": "Offer",
             "name": "Business",
             "price": "99",
             "priceCurrency": "EUR",
-            "description": "Unbegrenzte Ergebnisse, White-Label Export, API-Zugang, Prioritäts-Support"
+            "description": "Unbegrenzte Ergebnisse, White-Label Export, API-Zugang, Prioritäts-Support",
+            "availability": "https://schema.org/InStock"
         }
     ]
 }

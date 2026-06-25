@@ -1,7 +1,10 @@
 @extends('layouts.app')
 
 @section('title', 'Datenschutzerklärung | LeadFinder Pro')
-@section('meta_description', 'Datenschutzerklärung von LeadFinder Pro — Informationen zum Umgang mit personenbezogenen Daten.')
+@section('meta_description', 'Datenschutzerklärung von LeadFinder Pro — Informationen zum Umgang mit personenbezogenen Daten. DSGVO-konform.')
+@section('meta_keywords', 'Datenschutz, DSGVO, LeadFinder Pro, Datenschutzerklärung')
+@section('canonical', 'https://leadfinderpro.creativecoding.cloud/datenschutz')
+@section('meta_robots', 'noindex, follow')
 
 @section('content')
 <div class="max-w-4xl mx-auto px-4 py-16">
