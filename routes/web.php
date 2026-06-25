@@ -9,8 +9,10 @@ use App\Http\Controllers\LeadController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Auth\ForgotPasswordController;
+use App\Http\Controllers\Auth\LeadVerificationController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DemoController;
+use App\Http\Controllers\GuestScoreController;
 use App\Http\Controllers\StripeController;
 
 /*
@@ -23,6 +25,17 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 // Demo — public search demo (no login required)
 Route::get('/demo', [DemoController::class, 'index'])->name('demo.index');
 Route::post('/demo/search', [DemoController::class, 'search'])->name('demo.search');
+
+// Guest Score — public lead analysis (no login required)
+Route::get('/guest-score', [GuestScoreController::class, 'index'])->name('guest.score.index');
+Route::post('/guest-score/analyze', [GuestScoreController::class, 'analyze'])->name('guest.score.analyze');
+Route::get('/guest-score/{uuid}', [GuestScoreController::class, 'show'])->name('guest.score.show');
+Route::post('/guest-score/{uuid}/capture', [GuestScoreController::class, 'captureEmail'])->name('guest.score.capture');
+
+// Lead Email Verification (Double-Opt-In DSGVO)
+Route::get('/lead/verify', [LeadVerificationController::class, 'show'])->name('lead.verification.notice');
+Route::get('/lead/verify/{id}/{hash}', [LeadVerificationController::class, 'verify'])->name('lead.verification.verify')->middleware('signed');
+Route::post('/lead/resend', [LeadVerificationController::class, 'resend'])->name('lead.verification.resend');
 
 // Legal Pages
 Route::get('/impressum', function () { return view('legal.impressum'); })->name('legal.impressum');

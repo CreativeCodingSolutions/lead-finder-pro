@@ -13,6 +13,7 @@ class Lead extends Model
     protected $fillable = [
         'user_id',
         'search_id',
+        'guest_score_id',
         'industry_id',
         'name',
         'email',
@@ -32,6 +33,11 @@ class Lead extends Model
         'has_address',
         'has_name',
         'website_valid',
+        'ip_address',
+        'consent_given',
+        'consent_text',
+        'email_verified_at',
+        'verification_token',
         'notes',
         'status',
     ];
@@ -43,6 +49,8 @@ class Lead extends Model
         'has_address' => 'boolean',
         'has_name' => 'boolean',
         'website_valid' => 'boolean',
+        'consent_given' => 'boolean',
+        'email_verified_at' => 'datetime',
         'latitude' => 'float',
         'longitude' => 'float',
     ];
@@ -60,6 +68,31 @@ class Lead extends Model
     public function search(): BelongsTo
     {
         return $this->belongsTo(Search::class);
+    }
+
+    public function guestScore(): BelongsTo
+    {
+        return $this->belongsTo(GuestScore::class);
+    }
+
+    public function isVerified(): bool
+    {
+        return $this->email_verified_at !== null;
+    }
+
+    public function markAsVerified(): void
+    {
+        $this->forceFill([
+            'email_verified_at' => now(),
+            'verification_token' => null,
+        ])->save();
+    }
+
+    public function generateVerificationToken(): string
+    {
+        $token = \Illuminate\Support\Str::random(64);
+        $this->forceFill(['verification_token' => $token])->save();
+        return $token;
     }
 
     public function scopeWithWebsite($query)
