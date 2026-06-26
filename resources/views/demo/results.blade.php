@@ -18,7 +18,7 @@
             <div class="flex items-center gap-6 text-sm">
                 <a href="/demo" class="text-gray-600 hover:text-gray-900 font-medium">Demo</a>
                 <a href="/login" class="text-gray-600 hover:text-gray-900">Login</a>
-                <a href="/register" class="bg-gray-900 text-white px-4 py-2 rounded hover:bg-gray-800 text-sm">Kostenlos starten</a>
+                <a href="/register" class="bg-gray-900 text-white px-4 py-2 rounded hover:bg-gray-800 text-sm">Jetzt testen</a>
             </div>
         </div>
     </nav>

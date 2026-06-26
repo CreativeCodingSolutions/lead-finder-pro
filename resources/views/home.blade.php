@@ -391,7 +391,7 @@
     <!-- Preise -->
     <section id="preise" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <h2 class="text-2xl font-bold text-gray-900 mb-3">Preise</h2>
-        <p class="text-gray-600 mb-8">Kostenlos starten, bei Bedarf upgraden.</p>
+        <p class="text-gray-600 mb-8">Jetzt testen, bei Bedarf upgraden.</p>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl">
             <div class="border border-gray-200 rounded-lg p-6">

@@ -1,13 +1,13 @@
 @extends('layouts.app')
 
 @section('title', 'Preise — LeadFinderPro | Kostenlos, Pro €49, Business €99')
-@section('meta_description', 'Transparente Preise für LeadFinderPro. Kostenlos starten mit 3 Suchläufe/Monat. Pro ab €49/Monat, Business ab €99/Monat. Keine versteckten Kosten, monatlich kündbar.')
+@section('meta_description', 'Transparente Preise für LeadFinderPro. Jetzt testen mit 3 Suchläufe/Monat. Pro ab €49/Monat, Business ab €99/Monat. Keine versteckten Kosten, monatlich kündbar.')
 @section('meta_keywords', 'Lead Generation preise, B2B Leads Abo, LeadFinderPro Pro, LeadFinderPro Business, DACH')
 @section('canonical', 'https://leadfinderpro.creativecoding.cloud/pricing')
 
 @section('og_tags')
 <meta property="og:title" content="Preise — LeadFinderPro | Kostenlos, Pro €49, Business €99">
-<meta property="og:description" content="Transparente Preise für LeadFinderPro. Kostenlos starten, Pro ab €49/Monat. Keine versteckten Kosten.">
+<meta property="og:description" content="Transparente Preise für LeadFinderPro. Jetzt testen, Pro ab €49/Monat. Keine versteckten Kosten.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://leadfinderpro.creativecoding.cloud/pricing">
 @endsection
@@ -81,7 +81,7 @@
 <div class="container mx-auto px-4 py-12">
     <div class="text-center mb-12">
         <h1 class="text-4xl font-bold text-gray-900 mb-4">Einfache, transparente Preise</h1>
-        <p class="text-xl text-gray-600">Kostenlos starten. 7 Tage Pro kostenlos testen.</p>
+        <p class="text-xl text-gray-600">Jetzt testen. 7 Tage Pro kostenlos testen.</p>
     </div>
 
     <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
@@ -105,7 +105,7 @@
                 </li>
             </ul>
             <a href="{{ route('register') }}" class="block text-center w-full py-3 px-6 rounded-xl border-2 border-gray-300 text-gray-700 font-semibold hover:bg-gray-50 transition">
-                Kostenlos starten
+                Jetzt testen
             </a>
         </div>
 

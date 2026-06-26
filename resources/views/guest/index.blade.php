@@ -20,7 +20,7 @@
                 <a href="/guest-score" class="text-gray-600 hover:text-gray-900 font-medium">Lead-Analyse</a>
                 <a href="/pricing" class="text-gray-600 hover:text-gray-900">Preise</a>
                 <a href="/login" class="text-gray-600 hover:text-gray-900">Login</a>
-                <a href="/register" class="bg-gray-900 text-white px-4 py-2 rounded hover:bg-gray-800 text-sm">Kostenlos starten</a>
+                <a href="/register" class="bg-gray-900 text-white px-4 py-2 rounded hover:bg-gray-800 text-sm">Jetzt testen</a>
             </div>
         </div>
     </nav>

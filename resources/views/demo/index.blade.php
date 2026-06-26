@@ -55,7 +55,7 @@
                 <a href="/demo" class="text-gray-600 hover:text-gray-900 font-medium">Demo</a>
                 <a href="#preise" class="text-gray-600 hover:text-gray-900">Preise</a>
                 <a href="/login" class="text-gray-600 hover:text-gray-900">Login</a>
-                <a href="/register" class="bg-gray-900 text-white px-4 py-2 rounded hover:bg-gray-800 text-sm">Kostenlos starten</a>
+                <a href="/register" class="bg-gray-900 text-white px-4 py-2 rounded hover:bg-gray-800 text-sm">Jetzt testen</a>
             </div>
         </div>
     </nav>
@@ -114,7 +114,7 @@
     <section id="preise" class="bg-gray-50 border-t border-gray-200 py-16">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-2xl font-bold text-gray-900 mb-3 text-center">Preise</h2>
-            <p class="text-gray-600 mb-8 text-center">Kostenlos starten, bei Bedarf upgraden.</p>
+            <p class="text-gray-600 mb-8 text-center">Jetzt testen, bei Bedarf upgraden.</p>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
                 <div class="border border-gray-200 rounded-lg p-6 bg-white">
