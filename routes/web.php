@@ -14,6 +14,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DemoController;
 use App\Http\Controllers\GuestScoreController;
 use App\Http\Controllers\StripeController;
+use App\Http\Controllers\BlogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,6 +42,10 @@ Route::post('/lead/resend', [LeadVerificationController::class, 'resend'])->name
 Route::get('/impressum', function () { return view('legal.impressum'); })->name('legal.impressum');
 Route::get('/datenschutz', function () { return view('legal.datenschutz'); })->name('legal.datenschutz');
 Route::get('/agb', function () { return view('legal.agb'); })->name('legal.agb');
+
+// Blog Routes
+Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
+Route::get('/blog/{slug}', [BlogController::class, 'show'])->name('blog.show');
 
 Route::middleware('guest')->group(function () {
     Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
