@@ -32,7 +32,27 @@
     <p class="text-gray-500 mb-12">Tipps für B2B Lead-Generierung, Cold Outreach und Vertriebs-Strategie im DACH-Raum.</p>
 
     <div class="space-y-8">
-        <!-- Post 1: Cold Outreach skalieren -->
+        <!-- Post 4 (NEU) - SEO Longtail -->
+        <article class="border-b border-gray-200 pb-8">
+            <p class="text-sm text-indigo-600 font-medium mb-1">Lead-Recherche <span class="bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded-full ml-2">Neu</span></p>
+            <h2 class="text-xl font-semibold mb-2">
+                <a href="/blog/lead-recherche-deutschland-2026" class="hover:text-indigo-600">Lead-Recherche Deutschland 2026: Wo Sie B2B-Kunden finden</a>
+            </h2>
+            <p class="text-sm text-gray-400 mb-2">27. Juni 2026 · Lesezeit: 9 Min.</p>
+            <p class="text-gray-600">Praktische Lead-Recherche für den deutschen Markt: Quellen, Tools und Strategien für B2B-Vertriebsteams.</p>
+        </article>
+
+        <!-- Post 3 (NEU) - SEO Longtail -->
+        <article class="border-b border-gray-200 pb-8">
+            <p class="text-sm text-indigo-600 font-medium mb-1">Outreach Optimization <span class="bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded-full ml-2">Neu</span></p>
+            <h2 class="text-xl font-semibold mb-2">
+                <a href="/blog/cold-outreach-response-rate-2026" class="hover:text-indigo-600">Cold Outreach Response Rate: Was funktioniert 2026 wirklich?</a>
+            </h2>
+            <p class="text-sm text-gray-400 mb-2">27. Juni 2026 · Lesezeit: 8 Min.</p>
+            <p class="text-gray-600">Daten und Benchmarks zu Cold-Outreach-Antwortraten — und welche Faktoren den Unterschied machen.</p>
+        </article>
+
+        <!-- Post 2: Cold Outreach skalieren -->
         <article class="border-b border-gray-200 pb-8">
             <p class="text-sm text-indigo-600 font-medium mb-1">B2B Outreach & Skalierung</p>
             <h2 class="text-xl font-semibold mb-2">
