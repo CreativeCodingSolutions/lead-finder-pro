@@ -58,7 +58,7 @@
             <h3 class="text-xl font-semibold text-gray-900 mt-8 mb-3">Das Problem mit "Deutschlandweit"</h3>
             <ul class="list-disc list-inside space-y-1 mt-2">
                 <li>Zu viele Leads gleichzeitig = schlechte Qualität</li>
-                <li>Kein lokaler Bezug in der Outreach-Mail = niedrige Response-Rate</li>
+                <li>Kein lokaler Bezug in der Outreach-Mail = niedrige Antwortquote</li>
                 <li>Kein systematisches Follow-Up = verschwendetes Potenzial</li>
             </ul>
 
@@ -115,12 +115,12 @@
                 <li><strong>Tag 4:</strong> Follow-Up #1 (Value-Add: Case Study, Statistik)</li>
                 <li><strong>Tag 8:</strong> Follow-Up #2 (Letzter Versuch, kurzer Ton)</li>
             </ul>
-            <p><strong>Response-Rate:</strong> Ø 12% bei personalisierten Mails (vs. 2-3% bei Massen-Mails)</p>
+            <p><strong>Antwortquote:</strong> Ø 12% bei personalisierten Mails (vs. 2-3% bei Massen-Mails)</p>
 
             <h3 class="text-xl font-semibold text-gray-900 mt-8 mb-3">Phase 5: Analyse + Optimierung (wöchentlich)</h3>
             <ul class="list-disc list-inside space-y-1 mt-2">
-                <li>Response-Rate pro Region</li>
-                <li>Response-Rate pro Template</li>
+                <li>Antwortquote pro Region</li>
+                <li>Antwortquote pro Template</li>
                 <li>Conversion: Lead → Meeting → Kunde</li>
                 <li>Learnings in nächste Region einfließen lassen</li>
             </ul>
@@ -167,8 +167,8 @@
 
             <ol class="list-decimal list-inside space-y-2">
                 <li><strong>Zu viele Leads auf einmal</strong> → Qualität leidet, Follow-Up unmöglich</li>
-                <li><strong>Keine Personalisierung</strong> → Response-Rate unter 3%</li>
-                <li><strong>Kein Follow-Up</strong> → 80% der Responses kommen auf Follow-Up #1 oder #2</li>
+                <li><strong>Keine Personalisierung</strong> → Antwortquote unter 3%</li>
+                <li><strong>Kein Follow-Up</strong> → 80% der Antworten kommen auf Follow-Up #1 oder #2</li>
                 <li><strong>Falsche Branchen</strong> → Nicht jede Agentur braucht Lead-Recherche</li>
                 <li><strong>Keine DSGVO-Prüfung</strong> → OpenStreetMap ist DSGVO-konform, aber prüfen lohnt sich</li>
             </ol>

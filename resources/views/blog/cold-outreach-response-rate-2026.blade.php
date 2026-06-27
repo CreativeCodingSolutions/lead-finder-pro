@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
-@section('title', 'Wie Sie Ihre Cold Outreach Response-Rate verdoppeln | LeadFinderPro Blog')
-@section('meta_description', 'Von 4% auf 12% Response-Rate: Die 3 Follow-Up-Regel, Betreffzeilen A/B-Test, Personalisierung und Segmentierung für B2B-Cold Outreach.')
+@section('title', 'Wie Sie Ihre Antwortquote bei Kaltakquise verdoppeln | LeadFinderPro Blog')
+@section('meta_description', 'Von 4% auf 12% Antwortquote: Die 3 Follow-Up-Regel, Betreffzeilen A/B-Test, Personalisierung und Segmentierung für B2B-Kaltakquise.')
 @section('og_tags')
-<meta property="og:title" content="Wie Sie Ihre Cold Outreach Response-Rate verdoppeln">
-<meta property="og:description" content="Von 4% auf 12% Response-Rate: Die 3 Follow-Up-Regel, Betreffzeilen A/B-Test, Personalisierung und Segmentierung.">
+<meta property="og:title" content="Wie Sie Ihre Antwortquote bei Kaltakquise verdoppeln">
+<meta property="og:description" content="Von 4% auf 12% Antwortquote: Die 3 Follow-Up-Regel, Betreffzeilen A/B-Test, Personalisierung und Segmentierung.">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="de_DE">
 @endsection
@@ -14,8 +14,8 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "headline": "Wie Sie Ihre Cold Outreach Response-Rate verdoppeln",
-    "description": "Von 4% auf 12% Response-Rate: Die 3 Follow-Up-Regel, Betreffzeilen A/B-Test, Personalisierung und Segmentierung für B2B-Cold Outreach.",
+    "headline": "Wie Sie Ihre Antwortquote bei Kaltakquise verdoppeln",
+    "description": "Von 4% auf 12% Antwortquote: Die 3 Follow-Up-Regel, Betreffzeilen A/B-Test, Personalisierung und Segmentierung für B2B-Kaltakquise.",
     "author": {
         "@type": "Organization",
         "name": "CreativeCoding Solutions"
@@ -26,7 +26,7 @@
     },
     "datePublished": "2026-06-28",
     "inLanguage": "de-DE",
-    "keywords": "Cold Outreach Response Rate, B2B Outreach verbessern, Cold E-Mail Response Rate, Lead Outreach Strategie"
+    "keywords": "Kaltakquise Antwortquote, B2B Outreach verbessern, Kalt-E-Mail Antwortquote, Lead Outreach Strategie"
 }
 </script>
 @endsection
@@ -39,16 +39,16 @@
         <span class="mx-2">/</span>
         <a href="/blog" class="hover:text-indigo-600">Blog</a>
         <span class="mx-2">/</span>
-        <span class="text-gray-900">Cold Outreach Response-Rate</span>
+        <span class="text-gray-900">Antwortquote bei Kaltakquise</span>
     </nav>
 
     <article>
-        <p class="text-sm text-indigo-600 font-medium mb-1">B2B Outreach & Response-Optimierung</p>
-        <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Wie Sie Ihre Cold Outreach Response-Rate verdoppeln</h1>
+        <p class="text-sm text-indigo-600 font-medium mb-1">B2B Kaltakquise & Antwort-Optimierung</p>
+        <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Wie Sie Ihre Antwortquote bei Kaltakquise verdoppeln</h1>
         <p class="text-sm text-gray-400 mb-8">28. Juni 2026 · Lesezeit: 9 Min.</p>
 
         <div class="prose prose-lg max-w-none text-gray-700">
-            <p class="text-lg leading-relaxed">Die durchschnittliche Response-Rate bei B2B-Cold-E-Mails liegt bei 2-5%. Das ist ernüchternd. Aber die Top-10% der Outreach-Teams erreichen 12-15%. Was machen die anders?</p>
+            <p class="text-lg leading-relaxed">Die durchschnittliche Antwortquote bei B2B-Kalt-E-Mails liegt bei 2-5%. Das ist ernüchternd. Aber die Top-10% der Akquise-Teams erreichen 12-15%. Was machen die anders?</p>
 
             <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-4">Die 3 Follow-Up-Regel</h2>
 
@@ -56,10 +56,10 @@
 
             <p>Unsere Daten (672+ Mails, 1.044 Leads):</p>
             <ul class="list-disc list-inside space-y-1 mt-2">
-                <li>Erst-Mail Response-Rate: ~4%</li>
-                <li>Follow-Up Tag 3: +3-4% Response</li>
-                <li>Follow-Up Tag 7: +2-3% Response</li>
-                <li>Follow-Up Tag 14: +1-2% Response</li>
+                <li>Erst-Mail Antwortquote: ~4%</li>
+                <li>Follow-Up Tag 3: +3-4% Antworten</li>
+                <li>Follow-Up Tag 7: +2-3% Antworten</li>
+                <li>Follow-Up Tag 14: +1-2% Antworten</li>
                 <li><strong>Gesamt mit 3 Follow-Ups: ~10-12%</strong></li>
             </ul>
 
@@ -130,7 +130,7 @@
 
             <p><strong>SONDERN:</strong> „Hallo [Vorname], ich habe Ihre Website [URL] gesehen — Ihnen fehlt ein Blog-Bereich. Das kostet Sie ~30% organische Reichweite."</p>
 
-            <p><strong>Der Unterschied:</strong> Zeigen Sie, dass Sie die Website gesehen haben. 1 spezifischer Hinweis = 3x höhere Response-Rate.</p>
+            <p><strong>Der Unterschied:</strong> Zeigen Sie, dass Sie die Website gesehen haben. 1 spezifischer Hinweis = 3x höhere Antwortquote.</p>
 
             <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-4">Segmentierung nach Branchen</h2>
 
@@ -170,7 +170,7 @@
                 </table>
             </div>
 
-            <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-4">LeadFinderPro als Outreach-Engine</h2>
+            <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-4">LeadFinderPro als Kaltakquise-Plattform</h2>
 
             <p>Mit LeadFinderPro haben Sie die Basis:</p>
             <ul class="list-disc list-inside space-y-1 mt-2">

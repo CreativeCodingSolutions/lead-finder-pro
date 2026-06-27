@@ -5,7 +5,7 @@
 
 @section('og_tags')
 <meta property="og:title" content="Blog | LeadFinderPro — B2B Leads & Outreach Tipps">
-<meta property="og:description" content="Tipps für B2B Lead-Generierung, Cold Outreach und Vertriebs-Strategie im DACH-Raum.">
+<meta property="og:description" content="Tipps für B2B Lead-Generierung, Kaltakquise und Vertriebs-Strategie im DACH-Raum.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="de_DE">
 @endsection
@@ -16,7 +16,7 @@
     "@context": "https://schema.org",
     "@type": "Blog",
     "name": "LeadFinderPro Blog",
-    "description": "Tipps für B2B Lead-Generierung, Cold Outreach und Vertriebs-Strategie im DACH-Raum.",
+    "description": "Tipps für B2B Lead-Generierung, Kaltakquise und Vertriebs-Strategie im DACH-Raum.",
     "publisher": {
         "@type": "Organization",
         "name": "LeadFinderPro"

@@ -124,13 +124,13 @@
 
             <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-4">Lead-Generierung skalieren: Von 0 zu 1000+ Leads</h2>
 
-            <p>Wir haben es selbst gemacht: In 6 Wochen haben wir über <strong>1.000 qualifizierte B2B-Leads</strong> im DACH-Raum recherchiert und <strong>768+ personalisierte Outreach-E-Mails</strong> versendet. Die Response-Rate: 4% (Industrie-Durchschnitt B2B: 1-3%).</p>
+            <p>Wir haben es selbst gemacht: In 6 Wochen haben wir über <strong>1.000 qualifizierte B2B-Leads</strong> im DACH-Raum recherchiert und <strong>768+ personalisierte Outreach-E-Mails</strong> versendet. Die Antwortquote: 4% (Industrie-Durchschnitt B2B: 1-3%).</p>
 
             <p><strong>Die Formel:</strong></p>
             <ul class="list-disc list-inside space-y-1 mt-2">
                 <li>12 Leads pro Outreach-Runde (8 PWS + 4 LFP)</li>
                 <li>2 Runden pro Tag = 24 neue Kontakte/Tag</li>
-                <li>Bei 4% Response-Rate = ~1 Antwort pro Tag</li>
+                <li>Bei 4% Antwortquote = ~1 Antwort pro Tag</li>
                 <li>Conversion-Timeline: Erstkontakt → Antwort → Demo → Kunde = 14-45 Tage</li>
             </ul>
         </div>
