@@ -277,6 +277,16 @@
         </div>
     </section>
 
+    <!-- Social Proof Banner -->
+    <section class="bg-indigo-600 py-4">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap justify-center gap-8 text-sm text-white">
+                <span class="flex items-center gap-2 font-medium"><i class="fa-solid fa-users"></i> Bereits 500+ Praxen haben ihren Website-Score geprüft</span>
+                <span class="flex items-center gap-2 font-medium"><i class="fa-solid fa-building"></i> 1.926 Unternehmen in unserer Datenbank</span>
+            </div>
+        </div>
+    </section>
+
     <!-- Vertrauens-Signal -->
     <section class="border-t border-b border-gray-200 py-8 bg-gray-50">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -285,16 +295,6 @@
                 <span class="flex items-center gap-2"><i class="fa-solid fa-shield-halved text-green-500"></i> DSGVO-konform</span>
                 <span class="flex items-center gap-2"><i class="fa-solid fa-server text-green-500"></i> Serverstandort EU</span>
                 <span class="flex items-center gap-2"><i class="fa-solid fa-bolt text-green-500"></i> Ergebnisse in Sekunden</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Social Proof Banner -->
-    <section class="bg-indigo-600 py-4">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-wrap justify-center gap-8 text-sm text-white">
-                <span class="flex items-center gap-2 font-medium"><i class="fa-solid fa-building"></i> 1.926 Unternehmen in unserer Datenbank</span>
-                <span class="flex items-center gap-2 font-medium"><i class="fa-solid fa-users"></i> 500+ Praxen vertrauen unserer Technologie</span>
             </div>
         </div>
     </section>
