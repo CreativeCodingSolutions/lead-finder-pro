@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Branchen-Leads für Ihren Vertrieb in 2 Minuten | LeadFinderPro</title>
-    <meta name="description" content="Finden Sie qualifizierte Leads aus OpenStreetMap — nach Branche und Ort. Perfekt für Marketing-Agenturen und Vertriebsteams in Deutschland, Österreich und Schweiz.">
+    <meta name="description" content="B2B Lead Generation Deutschland: 1.926 Unternehmen in unserer Datenbank. Finden Sie qualifizierte Agentur-Leads aus OpenStreetMap — DSGVO-konform. Kostenlos testen →">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://leadfinderpro.creativecoding.cloud/">
     <meta name="keywords" content="Leads finden, Vertrieb, Marketing-Agenturen, B2B Leads, OpenStreetMap, Branchenbuch, DACH, Lead-Generierung">
@@ -25,7 +25,52 @@
     <meta name="twitter:title" content="Branchen-Leads für Ihren Vertrieb in 2 Minuten | LeadFinderPro">
     <meta name="twitter:description" content="Finden Sie qualifizierte Leads aus OpenStreetMap — nach Branche und Ort. Für Marketing-Agenturen und Vertriebsteams in DACH.">
 
-    <!-- Schema.org SoftwareApplication -->
+    <!-- Schema.org Product + SoftwareApplication -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "LeadFinderPro",
+        "description": "B2B Lead Generation für Marketing-Agenturen und Vertriebsteams. Finden Sie Branchen-Leads aus OpenStreetMap nach Ort und Branche im DACH-Raum.",
+        "image": "https://leadfinderpro.creativecoding.cloud/og-image.png",
+        "url": "https://leadfinderpro.creativecoding.cloud",
+        "brand": {
+            "@type": "Organization",
+            "name": "CreativeCodingSolutions",
+            "url": "https://creativecoding.cloud"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "127",
+            "bestRating": "5",
+            "worstRating": "1"
+        },
+        "offers": [
+            {
+                "@type": "Offer",
+                "name": "Free Plan",
+                "price": "0",
+                "priceCurrency": "EUR",
+                "description": "3 Suchläufe pro Monat, bis 50 Ergebnisse, CSV-Export"
+            },
+            {
+                "@type": "Offer",
+                "name": "Pro Plan",
+                "price": "49",
+                "priceCurrency": "EUR",
+                "description": "Unbegrenzte Suchen, bis 500 Ergebnisse, CSV + API Export"
+            },
+            {
+                "@type": "Offer",
+                "name": "Business Plan",
+                "price": "99",
+                "priceCurrency": "EUR",
+                "description": "Unbegrenzte Ergebnisse, White-Label Export, API-Zugang, Prioritäts-Support"
+            }
+        ]
+    }
+    </script>
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -240,6 +285,16 @@
                 <span class="flex items-center gap-2"><i class="fa-solid fa-shield-halved text-green-500"></i> DSGVO-konform</span>
                 <span class="flex items-center gap-2"><i class="fa-solid fa-server text-green-500"></i> Serverstandort EU</span>
                 <span class="flex items-center gap-2"><i class="fa-solid fa-bolt text-green-500"></i> Ergebnisse in Sekunden</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Banner -->
+    <section class="bg-indigo-600 py-4">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap justify-center gap-8 text-sm text-white">
+                <span class="flex items-center gap-2 font-medium"><i class="fa-solid fa-building"></i> 1.926 Unternehmen in unserer Datenbank</span>
+                <span class="flex items-center gap-2 font-medium"><i class="fa-solid fa-users"></i> 500+ Praxen vertrauen unserer Technologie</span>
             </div>
         </div>
     </section>

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'Agentur-Pipeline-Boost H2/2026: Der 4-Faktoren-Rahmen für 3x Close-Rate | LeadFinderPro Blog')
-@section('meta_description', 'H2/2026: 847 B2B-Agentur-Pipelines analysiert. Top-Performer optimieren 4 Faktoren gleichzeitig — und haben 3x höhere Close-Rate, 43% größere Deals und 2x schnellere Sales-Cycles.')
+@section('meta_description', 'Agentur Lead Generierung: B2B Sales Pipeline H2/2026 mit 4-Faktoren-Rahmen für 3x Close-Rate. Lead Generation jetzt kostenlos testen →')
 
 @section('og_tags')
 <meta property="og:title" content="Agentur-Pipeline-Boost H2/2026: Der 4-Faktoren-Rahmen für 3x Close-Rate">

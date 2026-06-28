@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'Wie Sie Ihre Antwortquote bei Kaltakquise verdoppeln | LeadFinderPro Blog')
-@section('meta_description', 'Von 4% auf 12% Antwortquote: Die 3 Follow-Up-Regel, Betreffzeilen A/B-Test, Personalisierung und Segmentierung für B2B-Kaltakquise.')
+@section('meta_description', 'Agentur Lead Generierung: Kaltakquise Antwortquote 2026 — von 4% auf 12% mit Follow-Up, A/B-Test & Segmentierung. B2B Adressen finden →')
 @section('og_tags')
 <meta property="og:title" content="Wie Sie Ihre Antwortquote bei Kaltakquise verdoppeln">
 <meta property="og:description" content="Von 4% auf 12% Antwortquote: Die 3 Follow-Up-Regel, Betreffzeilen A/B-Test, Personalisierung und Segmentierung.">

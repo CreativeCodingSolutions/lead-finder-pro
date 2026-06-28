@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'Kaltakquise skalieren: Von 50 zu 500 Mails pro Monat — ohne Spam | LeadFinderPro Blog')
-@section('meta_description', 'Wie B2B-Agenturen ihre Akquise von 50 auf 500+ personalisierte Mails pro Monat skalieren — ohne Spam, DSGVO-konform, mit echten Ergebnissen.')
+@section('meta_description', 'B2B Lead Generation: Kaltakquise skalieren von 50 auf 500 Mails pro Monat — DSGVO-konform & personalisiert. Agentur Leads finden →')
 
 @section('og_tags')
 <meta property="og:title" content="Kaltakquise skalieren: Von 50 zu 500 Mails pro Monat — ohne Spam">

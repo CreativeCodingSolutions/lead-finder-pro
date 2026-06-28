@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'Blog | LeadFinderPro — B2B Leads & Outreach Tipps für Vertrieb')
-@section('meta_description', 'Blog über B2B Lead-Generierung, Kaltakquise, Vertriebs-Strategie und DSGVO-konforme Akquise für Marketing-Agenturen und Vertriebsteams in DACH.')
+@section('meta_description', 'B2B Lead Generation Deutschland: Tipps für Agentur Lead Generierung, Unternehmensdatenbank DACH & Kaltakquise. Kostenlos Leads finden →')
 
 @section('og_tags')
 <meta property="og:title" content="Blog | LeadFinderPro — B2B Leads & Outreach Tipps">

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'Lead-Recherche Deutschland: B2B-Kontakte systematisch finden (2026) | LeadFinderPro Blog')
-@section('meta_description', 'Lead-Recherche im DACH-Raum: 3 Methoden im Vergleich — manuell, Datenbroker, OpenStreetMap. DSGVO-konform B2B-Leads finden mit LeadFinderPro.')
+@section('meta_description', 'B2B Lead Generation Deutschland: Lead-Recherche DACH mit OpenStreetMap. Unternehmensdatenbank & Agentur Lead Generierung — kostenlos Leads finden →')
 @section('og_tags')
 <meta property="og:title" content="Lead-Recherche Deutschland: B2B-Kontakte systematisch finden (2026)">
 <meta property="og:description" content="Lead-Recherche im DACH-Raum: 3 Methoden im Vergleich — manuell, Datenbroker, OpenStreetMap. DSGVO-konform B2B-Leads finden.">
@@ -135,6 +135,29 @@
             </ul>
         </div>
     </article>
+
+    <!-- Verwandte Artikel (Internal Links) -->
+    <div class="mt-12 border-t border-gray-200 pt-8">
+        <h3 class="text-lg font-semibold text-gray-900 mb-4">Weitere Artikel zu B2B Lead Generation</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <a href="/blog/agentur-pipeline-boost-h2-2026-4-faktoren-rahmen" class="block border border-gray-200 rounded-lg p-4 hover:border-indigo-300 transition">
+                <p class="text-sm font-medium text-gray-900">Agentur-Pipeline-Boost H2/2026: 4-Faktoren-Rahmen für 3x Close-Rate</p>
+                <p class="text-xs text-gray-500 mt-1">B2B Sales Pipeline</p>
+            </a>
+            <a href="/blog/dach-expansion-playbook-2026" class="block border border-gray-200 rounded-lg p-4 hover:border-indigo-300 transition">
+                <p class="text-sm font-medium text-gray-900">DACH-Expansion Playbook: Mit LeadFinderPro in neue Regionen</p>
+                <p class="text-xs text-gray-500 mt-1">B2B Expansion</p>
+            </a>
+            <a href="/blog/kaltakquise-antwortquote-2026" class="block border border-gray-200 rounded-lg p-4 hover:border-indigo-300 transition">
+                <p class="text-sm font-medium text-gray-900">Antwortraten bei Kaltakquise: Was 2026 wirklich funktioniert</p>
+                <p class="text-xs text-gray-500 mt-1">Akquise-Optimierung</p>
+            </a>
+            <a href="/blog/cold-outreach-skalieren-500-mails-pro-monat" class="block border border-gray-200 rounded-lg p-4 hover:border-indigo-300 transition">
+                <p class="text-sm font-medium text-gray-900">Kaltakquise skalieren: Von 50 zu 500 Mails pro Monat</p>
+                <p class="text-xs text-gray-500 mt-1">B2B Akquise</p>
+            </a>
+        </div>
+    </div>
 
     <!-- CTA Box -->
     <div class="mt-12 bg-gray-900 rounded-xl p-8 text-center">

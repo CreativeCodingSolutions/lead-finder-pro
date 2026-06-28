@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'DACH-Expansion Playbook: Wie Sie mit LeadFinderPro in neue Regionen expandieren | LeadFinderPro Blog')
-@section('meta_description', 'Von 0 auf 1.080 Leads: Die Regionen-Strategie für B2B-Expansion im DACH-Raum. 5 Phasen, 3 Templates, €123/Monat Gesamtkosten — OpenStreetMap + Personalisierung.')
+@section('meta_description', 'B2B Lead Generation DACH-Expansion: Von 0 auf 1.080 Leads mit Unternehmensdatenbank Deutschland. Agentur Strategie — jetzt Leads finden →')
 
 @section('og_tags')
 <meta property="og:title" content="DACH-Expansion Playbook: Wie Sie mit LeadFinderPro in neue Regionen expandieren">

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'Kaltakquise-Automation für Agenturen — Playbook KW33 | LeadFinderPro Blog')
-@section('meta_description', 'Wie Agenturen ihre Kaltakquise automatisieren: Lead-Recherche, personalisierte Outreach-Sequenzen, Follow-Up-Automation und Skalierung auf 500+ Mails pro Monat.')
+@section('meta_description', 'Agentur Lead Generierung: Kaltakquise Automation für 500+ Mails/Monat. B2B Leads skalieren mit LeadFinderPro — jetzt testen →')
 @section('og_tags')
 <meta property="og:title" content="Kaltakquise-Automation für Agenturen — Playbook KW33">
 <meta property="og:description" content="Wie Agenturen ihre Kaltakquise automatisieren: Lead-Recherche, personalisierte Outreach-Sequenzen und Skalierung.">

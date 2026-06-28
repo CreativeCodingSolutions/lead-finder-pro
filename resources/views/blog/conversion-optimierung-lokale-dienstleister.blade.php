@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'Conversion-Optimierung für lokale Dienstleister — Leads in Kunden verwandeln | LeadFinderPro Blog')
-@section('meta_description', 'Conversion-Optimierung für lokale Dienstleister: Wie Sie aus Leads Kunden machen. Vertrauenssignale, Follow-up, Outreach-Strategien und DSGVO-Konformität im DACH-Raum.')
+@section('meta_description', 'B2B Lead Generation Conversion: Leads in Kunden verwandeln mit Vertrauenssignalen & DSGVO-konformem Outreach. Leads finden →')
 
 @section('og_tags')
 <meta property="og:title" content="Conversion-Optimierung für lokale Dienstleister — Leads in Kunden verwandeln">
