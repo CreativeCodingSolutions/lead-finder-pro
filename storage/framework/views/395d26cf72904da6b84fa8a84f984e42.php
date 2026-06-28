@@ -1,16 +1,14 @@
-@extends('layouts.app')
+<?php $__env->startSection('title', 'Blog | LeadFinderPro — B2B Leads & Outreach Tipps für Vertrieb'); ?>
+<?php $__env->startSection('meta_description', 'Blog über B2B Lead-Generierung, Kaltakquise, Vertriebs-Strategie und DSGVO-konforme Akquise für Marketing-Agenturen und Vertriebsteams in DACH.'); ?>
 
-@section('title', 'Blog | LeadFinderPro — B2B Leads & Outreach Tipps für Vertrieb')
-@section('meta_description', 'Blog über B2B Lead-Generierung, Kaltakquise, Vertriebs-Strategie und DSGVO-konforme Akquise für Marketing-Agenturen und Vertriebsteams in DACH.')
-
-@section('og_tags')
+<?php $__env->startSection('og_tags'); ?>
 <meta property="og:title" content="Blog | LeadFinderPro — B2B Leads & Outreach Tipps">
 <meta property="og:description" content="Tipps für B2B Lead-Generierung, Kaltakquise und Vertriebs-Strategie im DACH-Raum.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="de_DE">
-@endsection
+<?php $__env->stopSection(); ?>
 
-@section('schema')
+<?php $__env->startSection('schema'); ?>
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -24,27 +22,17 @@
     "inLanguage": "de-DE"
 }
 </script>
-@endsection
+<?php $__env->stopSection(); ?>
 
-@section('content')
+<?php $__env->startSection('content'); ?>
 <div class="max-w-4xl mx-auto px-4 py-16">
     <h1 class="text-3xl font-bold mb-2">Blog</h1>
     <p class="text-gray-500 mb-12">Tipps für B2B Lead-Generierung, Kaltakquise und Vertriebs-Strategie im DACH-Raum.</p>
 
     <div class="space-y-8">
-        <!-- Post 32 (NEU) - Agentur Pipeline Boost H2/2026 -->
+        <!-- Post 10 (NEU) - DACH Expansion Playbook -->
         <article class="border-b border-gray-200 pb-8">
-            <p class="text-sm text-indigo-600 font-medium mb-1">LeadFinderPro <span class="bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded-full ml-2">Neu</span></p>
-            <h2 class="text-xl font-semibold mb-2">
-                <a href="/blog/agentur-pipeline-boost-h2-2026-4-faktoren-rahmen" class="hover:text-indigo-600">Agentur-Pipeline-Boost H2/2026: Der 4-Faktoren-Rahmen für 3x Close-Rate</a>
-            </h2>
-            <p class="text-sm text-gray-400 mb-2">1. Juli 2026 · Lesezeit: 10 Min.</p>
-            <p class="text-gray-600">847 B2B-Agentur-Pipelines analysiert. Top-Performer optimieren 4 Faktoren gleichzeitig — und haben 3x höhere Close-Rate, 43% größere Deals und 2x schnellere Sales-Cycles.</p>
-        </article>
-
-        <!-- Post 10 - DACH Expansion Playbook -->
-        <article class="border-b border-gray-200 pb-8">
-            <p class="text-sm text-indigo-600 font-medium mb-1">B2B Expansion</p>
+            <p class="text-sm text-indigo-600 font-medium mb-1">B2B Expansion <span class="bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded-full ml-2">Neu</span></p>
             <h2 class="text-xl font-semibold mb-2">
                 <a href="/blog/dach-expansion-playbook-2026" class="hover:text-indigo-600">DACH-Expansion Playbook: Wie Sie mit LeadFinderPro in neue Regionen expandieren</a>
             </h2>
@@ -90,4 +78,6 @@
         <a href="/" class="inline-block bg-indigo-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-indigo-700 transition">Jetzt Leads finden →</a>
     </div>
 </div>
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.app', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH /opt/data/founder/apps/lead-finder-pro/resources/views/blog/index.blade.php ENDPATH**/ ?>
