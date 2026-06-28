@@ -15,6 +15,7 @@ use App\Http\Controllers\DemoController;
 use App\Http\Controllers\GuestScoreController;
 use App\Http\Controllers\StripeController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\Lead\LeadCaptureController;
 
 /*
 |--------------------------------------------------------------------------
@@ -111,6 +112,11 @@ foreach ($modules as $routes) {
         require $routes;
     }
 }
+
+// Lead Magnet Routes
+Route::get('/pipeline-template', [LeadCaptureController::class, 'pipelineTemplate'])->name('lead-magnets.lfp.template');
+Route::post('/pipeline-template/download', [LeadCaptureController::class, 'captureLfpEmail'])->name('lead-magnets.lfp.capture');
+Route::get('/pipeline-template/thanks', [LeadCaptureController::class, 'thanks'])->name('lead-magnets.lfp.thanks');
 
 // Public Pricing Page — MUST be after module loading so it takes precedence
 Route::get('/pricing', function () { return view('pricing'); })->name('pricing');
