@@ -19,6 +19,10 @@ Route::get('/sitemap.xml', function () {
         ['url' => '/blog/dach-expansion-playbook-2026', 'priority' => '0.7', 'changefreq' => 'monthly'],
         ['url' => '/blog/kaltakquise-antwortquote-2026', 'priority' => '0.7', 'changefreq' => 'monthly'],
         ['url' => '/blog/lead-recherche-deutschland-2026', 'priority' => '0.7', 'changefreq' => 'monthly'],
+        ['url' => '/blog/agentur-pipeline-boost-h2-2026-4-faktoren-rahmen', 'priority' => '0.9', 'changefreq' => 'monthly'],
+        ['url' => '/blog/kaltakquise-automation-agenturen-kw33', 'priority' => '0.7', 'changefreq' => 'monthly'],
+        ['url' => '/blog/conversion-optimierung-lokale-dienstleister', 'priority' => '0.7', 'changefreq' => 'monthly'],
+        ['url' => '/blog/cold-outreach-skalieren-500-mails-pro-monat', 'priority' => '0.7', 'changefreq' => 'monthly'],
     ];
 
     $baseUrl = config('app.url');
