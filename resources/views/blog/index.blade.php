@@ -59,17 +59,17 @@
                 <a href="/blog/agentur-pipeline-boost-h2-2026-4-faktoren-rahmen" class="hover:text-indigo-600">Agentur-Pipeline-Boost H2/2026: Der 4-Faktoren-Rahmen für 3x Close-Rate</a>
             </h2>
             <p class="text-sm text-gray-400 mb-2">1. Juli 2026 · Lesezeit: 10 Min.</p>
-            <p class="text-gray-600">847 B2B-Agentur-Pipelines analysiert. Top-Performer optimieren 4 Faktoren gleichzeitig — und haben 3x höhere Close-Rate, 43% größere Deals und 2x schnellere Sales-Cycles.</p>
+            <p class="text-gray-600">4 Faktoren für eine stärkere B2B-Pipeline: Leads, Deal-Size, Close-Rate und Verkaufstempo. Ergebnisse können je nach Branche variieren.</p>
         </article>
 
-        <!-- Post 10 - DACH Expansion Playbook -->
+        <!-- Post 10 - DACH Expansion Leitfaden -->
         <article class="border-b border-gray-200 pb-8">
             <p class="text-sm text-indigo-600 font-medium mb-1">B2B Expansion</p>
             <h2 class="text-xl font-semibold mb-2">
-                <a href="/blog/dach-expansion-playbook-2026" class="hover:text-indigo-600">DACH-Expansion Playbook: Wie Sie mit LeadFinderPro in neue Regionen expandieren</a>
+                <a href="/blog/dach-expansion-playbook-2026" class="hover:text-indigo-600">DACH-Expansion: Systematisch in neue Regionen expandieren</a>
             </h2>
             <p class="text-sm text-gray-400 mb-2">28. Juni 2026 · Lesezeit: 10 Min.</p>
-            <p class="text-gray-600">Von 0 auf 1.080 Leads: Die Regionen-Strategie für B2B-Expansion im DACH-Raum. 5 Phasen, 3 Templates, €123/Monat Gesamtkosten.</p>
+            <p class="text-gray-600">Regionale Expansion im DACH-Raum mit persönlichem Bezug. 5 Phasen für eine skalierbare Strategie. Ergebnisse können variieren.</p>
         </article>
 
         <!-- Post 4 - SEO Longtail -->

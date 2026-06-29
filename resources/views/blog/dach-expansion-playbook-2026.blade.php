@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
-@section('title', 'DACH-Expansion Playbook: Wie Sie mit LeadFinderPro in neue Regionen expandieren | LeadFinderPro Blog')
-@section('meta_description', 'B2B Lead Generation DACH-Expansion: Von 0 auf 1.080 Leads mit Unternehmensdatenbank Deutschland. Agentur Strategie — jetzt Leads finden →')
+@section('title', 'DACH-Expansion Leitfaden: Wie Sie mit LeadFinderPro in neue Regionen expandieren | LeadFinderPro Blog')
+@section('meta_description', 'B2B Lead Generation DACH-Expansion: Eine systematische Regionalstrategie für nachhaltiges Wachstum. Agentur Strategie — jetzt Leads finden →')
 
 @section('og_tags')
-<meta property="og:title" content="DACH-Expansion Playbook: Wie Sie mit LeadFinderPro in neue Regionen expandieren">
-<meta property="og:description" content="Von 0 auf 1.080 Leads: Die Regionen-Strategie für B2B-Expansion im DACH-Raum. 5 Phasen, 3 Templates, €123/Monat Gesamtkosten.">
+<meta property="og:title" content="DACH-Expansion Leitfaden: Wie Sie mit LeadFinderPro in neue Regionen expandieren">
+<meta property="og:description" content="Regionale Expansion im DACH-Raum: Eine systematische Strategie für B2B-Expansion mit persönlichem Bezug. Ergebnisse können variieren.">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="de_DE">
 @endsection
@@ -15,8 +15,8 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "headline": "DACH-Expansion Playbook: Wie Sie mit LeadFinderPro in neue Regionen expandieren",
-    "description": "Von 0 auf 1.080 Leads: Die Regionen-Strategie für B2B-Expansion im DACH-Raum. 5 Phasen, 3 Templates, €123/Monat Gesamtkosten.",
+    "headline": "DACH-Expansion Leitfaden: Wie Sie mit LeadFinderPro in neue Regionen expandieren",
+    "description": "Regionale Expansion im DACH-Raum: Eine systematische Strategie für B2B-Expansion mit persönlichem Bezug. Ergebnisse können variieren.",
     "author": {
         "@type": "Organization",
         "name": "CreativeCoding Solutions"
@@ -40,20 +40,20 @@
         <span class="mx-2">/</span>
         <a href="/blog" class="hover:text-indigo-600">Blog</a>
         <span class="mx-2">/</span>
-        <span class="text-gray-900">DACH-Expansion Playbook</span>
+        <span class="text-gray-900">DACH-Expansion Leitfaden</span>
     </nav>
 
     <article>
         <p class="text-sm text-indigo-600 font-medium mb-1">B2B Expansion <span class="bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded-full ml-2">Neu</span></p>
-        <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">DACH-Expansion Playbook: Wie Sie mit LeadFinderPro in neue Regionen expandieren</h1>
+        <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">DACH-Expansion Leitfaden: Wie Sie mit LeadFinderPro in neue Regionen expandieren</h1>
         <p class="text-sm text-gray-400 mb-8">28. Juni 2026 · Lesezeit: 10 Min.</p>
 
         <div class="prose prose-lg max-w-none text-gray-700">
-            <p class="text-lg leading-relaxed">In 76 Outreach-Runden haben wir über 1.080 B2B-Leads im DACH-Raum recherchiert. Der Schlüssel: Eine systematische Regionen-Strategie, die skalierbar ist.</p>
+            <p class="text-lg leading-relaxed">Regionale Expansion im DACH-Raum erfordert einen systematischen Aufbau. Der Schlüssel: Eine Regionalstrategie, die persönlichen Bezug herstellt und skalierbar bleibt.</p>
 
-            <p>In diesem Playbook zeigen wir Ihnen, wie Sie das auf Ihr Business übertragen — ob Agentur, SaaS-Unternehmen oder Beratung.</p>
+            <p>In diesem Leitfaden zeigen wir Ihnen, das auf Ihr Business übertragen — ob Agentur, SaaS-Unternehmen oder Beratung.</p>
 
-            <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-4">Von 0 auf 1.080 Leads: Die Regionen-Strategie</h2>
+            <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-4">Die Regionen-Strategie</h2>
 
             <h3 class="text-xl font-semibold text-gray-900 mt-8 mb-3">Das Problem mit "Deutschlandweit"</h3>
             <ul class="list-disc list-inside space-y-1 mt-2">
@@ -98,7 +98,7 @@
                 <li>Filter: Branche, Stadt, Größe</li>
                 <li>Enrichment: E-Mail, Telefon, Website</li>
             </ul>
-            <p><strong>Beispiel Stuttgart:</strong> 8 PWS-Leads (Zahnarzt, Physio, Tierarzt) + 4 LFP-Leads (Agenturen, Digitalagenturen) — Ø 12 Sekunden pro Lead</p>
+            <p><strong>Beispiel Stuttgart:</strong> Ein paar PWS-Leads (Zahnarzt, Physio, Tierarzt) + einige LFP-Leads (Agenturen, Digitalagenturen) in kurzer Zeit recherchiert.</p>
 
             <h3 class="text-xl font-semibold text-gray-900 mt-8 mb-3">Phase 3: Outreach-Mails personalisieren (1 Std)</h3>
             <p><strong>3 Templates je nach Branche:</strong></p>
@@ -115,7 +115,7 @@
                 <li><strong>Tag 4:</strong> Follow-Up #1 (Value-Add: Case Study, Statistik)</li>
                 <li><strong>Tag 8:</strong> Follow-Up #2 (Letzter Versuch, kurzer Ton)</li>
             </ul>
-            <p><strong>Antwortquote:</strong> Ø 12% bei personalisierten Mails (vs. 2-3% bei Massen-Mails)</p>
+            <p><strong>Antwortquote:</strong> Personalisierte Mails erzielen erfahrungsgemäß deutlich höhere Antwortquoten als Massen-Mails — die genauen Werte hängen stark von Branche und Ausgangslage ab.</p>
 
             <h3 class="text-xl font-semibold text-gray-900 mt-8 mb-3">Phase 5: Analyse + Optimierung (wöchentlich)</h3>
             <ul class="list-disc list-inside space-y-1 mt-2">
@@ -161,14 +161,14 @@
                 </table>
             </div>
 
-            <p><strong>Gesamt:</strong> Ab €123/Monat für eine vollständige Outreach-Maschinerie.</p>
+            <p><strong>Hinweis:</strong> Die genauen Kosten hängen von den gewählten Tools und Tarifen ab. Bitte prüfen Sie die aktuellen Preise direkt bei den Anbietern.</p>
 
             <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-4">Häufige Fehler</h2>
 
             <ol class="list-decimal list-inside space-y-2">
                 <li><strong>Zu viele Leads auf einmal</strong> → Qualität leidet, Follow-Up unmöglich</li>
-                <li><strong>Keine Personalisierung</strong> → Antwortquote unter 3%</li>
-                <li><strong>Kein Follow-Up</strong> → 80% der Antworten kommen auf Follow-Up #1 oder #2</li>
+                <li><strong>Keine Personalisierung</strong> → Antwortquote deutlich niedriger als bei personalisierten Mails</li>
+                <li><strong>Kein Follow-Up</strong> → Ein großer Teil der Antworten kommt erst auf spätere Kontaktversuche</li>
                 <li><strong>Falsche Branchen</strong> → Nicht jede Agentur braucht Lead-Recherche</li>
                 <li><strong>Keine DSGVO-Prüfung</strong> → OpenStreetMap ist DSGVO-konform, aber prüfen lohnt sich</li>
             </ol>
@@ -192,7 +192,7 @@
 
     <!-- CTA Box -->
     <div class="mt-12 bg-gray-900 rounded-xl p-8 text-center">
-        <h3 class="text-xl font-bold text-white mb-3">Bereit für Ihre nächsten 1.000 Leads?</h3>
+        <h3 class="text-xl font-bold text-white mb-3">Bereit für Ihre nächsten Leads?</h3>
         <p class="text-gray-400 mb-6 text-sm">Testen Sie LeadFinderPro — 3 Suchläufe kostenlos, keine Kreditkarte.</p>
         <a href="/" class="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-indigo-700 transition">Jetzt Leads finden →</a>
     </div>
