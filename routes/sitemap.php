@@ -13,6 +13,12 @@ Route::get('/sitemap.xml', function () {
         ['url' => '/impressum', 'priority' => '0.1', 'changefreq' => 'yearly'],
         ['url' => '/datenschutz', 'priority' => '0.1', 'changefreq' => 'yearly'],
         ['url' => '/agb', 'priority' => '0.1', 'changefreq' => 'yearly'],
+        ['url' => '/blog', 'priority' => '0.7', 'changefreq' => 'weekly'],
+        ['url' => '/blog/b2b-marketing-attribution-agenturen', 'priority' => '0.9', 'changefreq' => 'monthly'],
+        ['url' => '/blog/b2b-lead-scoring-agenturen', 'priority' => '0.7', 'changefreq' => 'monthly'],
+        ['url' => '/blog/dach-expansion-playbook-2026', 'priority' => '0.7', 'changefreq' => 'monthly'],
+        ['url' => '/blog/kaltakquise-antwortquote-2026', 'priority' => '0.7', 'changefreq' => 'monthly'],
+        ['url' => '/blog/lead-recherche-deutschland-2026', 'priority' => '0.7', 'changefreq' => 'monthly'],
     ];
 
     $baseUrl = config('app.url');

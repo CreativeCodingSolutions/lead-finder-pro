@@ -32,6 +32,26 @@
     <p class="text-gray-500 mb-12">Tipps für B2B Lead-Generierung, Kaltakquise und Vertriebs-Strategie im DACH-Raum.</p>
 
     <div class="space-y-8">
+        <!-- Post 36 (NEU) - B2B Marketing Attribution für Agenturen -->
+        <article class="border-b border-gray-200 pb-8">
+            <p class="text-sm text-indigo-600 font-medium mb-1">Marketing Attribution <span class="bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded-full ml-2">Neu</span></p>
+            <h2 class="text-xl font-semibold mb-2">
+                <a href="/blog/b2b-marketing-attribution-agenturen" class="hover:text-indigo-600">B2B Marketing Attribution für Agenturen: Welcher Kanal bringt wirklich Kunden?</a>
+            </h2>
+            <p class="text-sm text-gray-400 mb-2">1. Juli 2026 · Lesezeit: 10 Min.</p>
+            <p class="text-gray-600">5 Attributionsmodelle im Vergleich: First-Touch, Last-Touch, Linear, Time-Decay, U-Shaped. Mit Case Study einer Frankfurter Agentur und praktischem Implementierungsleitfaden.</p>
+        </article>
+
+        <!-- Post 35 (NEU) - B2B Lead-Scoring für Agenturen -->
+        <article class="border-b border-gray-200 pb-8">
+            <p class="text-sm text-indigo-600 font-medium mb-1">B2B Lead-Scoring <span class="bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded-full ml-2">Neu</span></p>
+            <h2 class="text-xl font-semibold mb-2">
+                <a href="/blog/b2b-lead-scoring-agenturen" class="hover:text-indigo-600">B2B Lead-Scoring: Wie Agenturen die besten Kunden finden</a>
+            </h2>
+            <p class="text-sm text-gray-400 mb-2">29. Juni 2026 · Lesezeit: 11 Min.</p>
+            <p class="text-gray-600">B2B Lead Scoring für Agenturen: Systematisch die besten Kunden identifizieren — Scoring-Modelle, Automatisierung, Integration in Brevo und HubSpot.</p>
+        </article>
+
         <!-- Post 32 (NEU) - Agentur Pipeline Boost H2/2026 -->
         <article class="border-b border-gray-200 pb-8">
             <p class="text-sm text-indigo-600 font-medium mb-1">LeadFinderPro <span class="bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded-full ml-2">Neu</span></p>
